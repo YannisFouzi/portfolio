@@ -9,7 +9,7 @@ Mon portfolio avec mes principaux projets dev et toutes mes autres compétences
 
 ## Aperçu
 
-![Capture d'écran du jeu](C:\Users\yanni\Desktop\2024-09-04 14_01_06-.png)
+![Capture d'écran du site](https://image.noelshack.com/fichiers/2024/36/3/1725451288-2024-09-04-14-01-06.png)
 
 ## Installation
 
