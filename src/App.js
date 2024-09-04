@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './index.css';
+import Header from './components/Header/Header';
+import Nav from './components/nav/Nav';
+import Projets from './components/projets/Projets';
+import Musique from './components/Musique';
+import Tournage from './components/Tournage/Tournage';
+import VisualEffects from './components/VisualEffects';
+import Redacteur from './components/Redacteur';
+import Theatre from './components/Theatre';
+import Footer from './components/Footer';
+import NetflixAnimation from './components/NetflixAnimation/NetflixAnimation';
+import Skills from './components/skills/Skills';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Nav />
+      <Skills />
+      <Projets />
+      <Musique />
+      <Tournage />
+      <VisualEffects />
+      <Redacteur />
+      <Theatre />
+      <NetflixAnimation />
+      <Footer />
+    </>
   );
 }
 

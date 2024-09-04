@@ -1,0 +1,28 @@
+.email-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.clipboard {
+  height: 3rem;
+  border: 0;
+  border-radius: 1.5rem;
+  font-weight: 600;
+  background: #007bff;
+  border: 2px solid transparent;
+  transition: transform 150ms ease-in-out, background-color 200ms ease-in-out;
+  cursor: pointer;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  color: white;
+}
+
+.clipboard:hover {
+  transform: scale(1.075);
+  background-color: #0056b3;
+}
+
+.clipboard:active {
+  transform: scale(0.95);
+}
