@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { Back } from 'gsap';
-import myCV from '../pdf/Yannis fouzi_CV_2024.pdf';
+import myCV from '../pdf/Yannis_Fouzi_CV_2024.pdf';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import './Header.css';
@@ -36,7 +36,7 @@ function Header() {
         <h1>
           <span className="title">Yannis Fouzi</span>
         </h1>
-        <h2>Spécialiste Développeur React</h2>
+        <h2>Développeur Spécialiste React</h2>
         <a href={myCV} download className="link-github">
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false">

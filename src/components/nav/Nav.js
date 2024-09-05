@@ -84,8 +84,8 @@ function Nav() {
           <li><a href="#projets" onClick={(e) => scrollToSection(e, '#projets')}>Projets web</a></li>
           <li><a href="#musique" onClick={(e) => scrollToSection(e, '#musique')}>Musique</a></li>
           <li><a href="#tournage" onClick={(e) => scrollToSection(e, '#tournage')}>Tournage vidéo</a></li>
-          <li><a href="#visual-effects" onClick={(e) => scrollToSection(e, '#visual-effects')}>Effet Visuel</a></li>
-          <li><a href="#redacteur" onClick={(e) => scrollToSection(e, '#redacteur')}>Rédacteur</a></li>
+          <li><a href="#visual-effects" onClick={(e) => scrollToSection(e, '#visual-effects')}>Effets Visuels</a></li>
+          <li><a href="#redacteur" onClick={(e) => scrollToSection(e, '#redacteur')}>Rédaction</a></li>
           <li><a href="#theatre" onClick={(e) => scrollToSection(e, '#theatre')}>Théâtre</a></li>
         </ul>
       </div>

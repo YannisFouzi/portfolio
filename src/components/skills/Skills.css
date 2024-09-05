@@ -63,6 +63,12 @@
     text-align: center;
 }
 
+.skills-list li:last-child {
+    margin: 0 auto;
+    width: 50%; /* Adjust this value as needed */
+    text-align: center;
+}
+
 /* Rubrique pour chaque catégorie */
 .skills-column h3 {
     text-align: center;

@@ -9,6 +9,7 @@ import parimis from '../../img/parimis.png';
 import annonceo from '../../img/annonceo.png';
 import vercelIcone from '../../img/vercel_icone.png';
 import woocommerce from '../../img/woocommerce.svg';
+import tafraout from '../../img/tafraout.png';
 
 function Projets() {
   const projets = [
@@ -23,7 +24,7 @@ function Projets() {
       title: 'NX Project (2022)',
       link: 'https://nx.fouzi-dev.fr/',
       image: nx,
-      description: 'La homepage créée lors de mon altérnance chez NX Creative',
+      description: 'La homepage créée lors de mon alternance chez NX Creative',
       technologies: [faReact, faCss3Alt],
     },
     {
@@ -45,6 +46,13 @@ function Projets() {
       link: 'https://parimis.fouzi-dev.fr/',
       image: parimis,
       description: 'Un site de démonstration d\'un hôtel de luxe',
+      technologies: [faHtml5, faCss3Alt, faSquareJs],
+    },
+    {
+      title: 'Tafraout (2018)',
+      link: 'https://parimis.fouzi-dev.fr/',
+      image: tafraout,
+      description: 'Mon premier vrai site effectué lors de mon stage en BTS pour un restaurant',
       technologies: [faHtml5, faCss3Alt, faSquareJs],
     },
   ];
