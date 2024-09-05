@@ -14,7 +14,7 @@ function Nav() {
   };
 
   const handleScroll = useCallback(() => {
-    if (!ticking.current) {
+    if (!ticking.current && !menuOpen) {
       window.requestAnimationFrame(() => {
         if (initialNavPositionRef.current === null) {
           const navRect = navRef.current.getBoundingClientRect();
