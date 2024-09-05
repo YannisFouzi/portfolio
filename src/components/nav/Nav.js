@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import BurgerMenu from '../BurgerMenu';
+import BurgerMenu from './BurgerMenu';
 import './Nav.css';
 
 function Nav() {

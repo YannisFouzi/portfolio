@@ -137,6 +137,8 @@ nav ul {
   /* Afficher le bouton burger uniquement sur les petits écrans */
   @media (max-width: 768px) {
     .burger-menu {
+
+  top: 1rem; /* Ajustez la position selon vos besoins */
       font-size: 1.5rem;
       background-color: white !important;
       border: 2px solid black !important;
@@ -145,7 +147,7 @@ nav ul {
       transition: transform 0.3s ease-in-out;
       padding: 0.25rem !important;
       border-radius: 0.375rem !important;
-      z-index: 1001 !important; /* S'assurer que le bouton soit au-dessus des autres éléments */
+      z-index: 1002 !important; /* S'assurer que le bouton soit au-dessus des autres éléments */
     }
   
     .nav-links {
