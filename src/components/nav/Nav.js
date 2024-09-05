@@ -44,8 +44,6 @@ function Nav() {
     };
 
     window.addEventListener('resize', handleResize);
-    
-    // Initial calculation
     handleScroll();
 
     return () => {

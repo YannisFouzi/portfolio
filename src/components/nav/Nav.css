@@ -164,7 +164,7 @@ nav ul {
     }
 
     nav ul li {
-      flex: 1 0 45%; /* Adjust for smaller screens */
+      flex: 1 0 45%;
     }
   
     .nav-links li {

@@ -21,7 +21,7 @@ function Projets() {
     },
     {
       title: 'NX Project (2022)',
-      link: 'https://fouzi-dev.fr/NX/',
+      link: 'https://nx.fouzi-dev.fr/',
       image: nx,
       description: 'La homepage créée lors de mon altérnance chez NX Creative',
       technologies: [faReact, faCss3Alt],
@@ -35,14 +35,14 @@ function Projets() {
     },
     {
       title: 'Annonceo (2020)',
-      link: 'https://fouzi-dev.fr/annonceoPHP/',
+      link: 'https://annonceophp.fouzi-dev.fr/',
       image: annonceo,
       description: 'Un site de démonstration de petites annonces pour la vente entre particuliers',
       technologies: [faPhp, faCss3Alt],
     },
     {
       title: 'Parimis (2020)',
-      link: 'https://fouzi-dev.fr/Parimis/',
+      link: 'https://parimis.fouzi-dev.fr/',
       image: parimis,
       description: 'Un site de démonstration d\'un hôtel de luxe',
       technologies: [faHtml5, faCss3Alt, faSquareJs],
