@@ -1,70 +1,57 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Mon Portfolio
 
-## Available Scripts
+**Deploy with Vercel**: [https://sabacc.fouzi-dev.fr/](https://sabacc.fouzi-dev.fr/)
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+Mon portfolio avec mes principaux projets dev et toutes mes autres compétences
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Aperçu
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Capture d'écran du site](https://image.noelshack.com/fichiers/2024/36/3/1725451288-2024-09-04-14-01-06.png)
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Pour exécuter ce projet localement, suivez ces étapes :
 
-### `npm run build`
+1. Clonez le dépôt :
+   ```bash
+   git clone https://github.com/YannisFouzi/portfolio.git
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Accédez au répertoire du projet :
+   ```bash
+   cd portfolio_yannis
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Installez les dépendances :
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Exécutez l'application en mode développement :
+   ```bash
+   npm start
+   ```
 
-### `npm run eject`
+   Ouvrez [http://localhost:3000](http://localhost:3000) pour voir l'application dans votre navigateur.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Déploiement
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Ce projet est déployé en continu sur [Vercel](https://vercel.com). Chaque commit poussé sur la branche `master` déclenche un nouveau déploiement.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Technologies Utilisées
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **React** - Pour la construction de l'interface utilisateur.
+- **Vercel** - Pour le déploiement et l'hébergement.
+- **GitHub** - Pour la gestion du code source.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Auteur
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Yannis Fouzi** - [GitHub](https://github.com/YannisFouzi)
 
-### Code Splitting
+## Licence
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
