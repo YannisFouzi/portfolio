@@ -5,6 +5,9 @@
 }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border: 0.25rem solid var(--color-black);
   background-color: var(--color-white);
   padding: 1.5rem;
@@ -30,6 +33,7 @@
   justify-content: center;
   margin: 1rem 0;
 }
+
 
 .technologies-icons svg {
   color: var(--color-dark-blue);

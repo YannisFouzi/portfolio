@@ -17,7 +17,7 @@ function Projets() {
       title: 'Sabacc de Kessel (2024)',
       link: 'https://sabacc.fouzi-dev.fr/',
       image: sabaccKessel,
-      description: 'Un jeu de carte tiré de l\'univers Star Wars',
+      description: 'Un jeu de carte tiré de l\'univers Star Wars (Projet en cours de développement) ',
       technologies: [faReact, faCss3Alt, vercelIcone],
     },
     {
@@ -66,7 +66,7 @@ function Projets() {
             <div key={index} className="project-card">
               <h3>{projet.title}</h3>
               <img src={projet.image} alt={`Screenshot du projet ${projet.title}`} className="project-image" />
-              <p>{projet.description}</p>
+              <p dangerouslySetInnerHTML={{ __html: projet.description }}></p>
               <p><strong>Technologie(s)</strong></p>
               <div className="technologies-icons">
                 {projet.technologies.map((tech, i) => (
