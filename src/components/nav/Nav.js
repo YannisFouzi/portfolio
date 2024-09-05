@@ -1,45 +1,84 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import BurgerMenu from '../BurgerMenu';
 import './Nav.css';
 
 function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
+  const navRef = useRef(null);
+  const initialNavPositionRef = useRef(null);
+  const ticking = useRef(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
-  useEffect(() => {
-    const nav = document.querySelector('nav');
-    const navOffsetTop = nav.offsetTop;
+  const handleScroll = useCallback(() => {
+    if (!ticking.current) {
+      window.requestAnimationFrame(() => {
+        if (initialNavPositionRef.current === null) {
+          const navRect = navRef.current.getBoundingClientRect();
+          initialNavPositionRef.current = navRect.top + window.scrollY;
+        }
 
-    const handleScroll = () => {
-      if (window.scrollY >= navOffsetTop - 10) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
+        const scrollPosition = window.scrollY;
+        const shouldBeSticky = scrollPosition > initialNavPositionRef.current;
+
+        if (shouldBeSticky !== isSticky) {
+          setIsSticky(shouldBeSticky);
+        }
+
+        ticking.current = false;
+      });
+
+      ticking.current = true;
+    }
+  }, [isSticky]);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    const handleResize = () => {
+      initialNavPositionRef.current = null;
+      handleScroll();
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+    
+    // Initial calculation
+    handleScroll();
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [handleScroll]);
+
+  useEffect(() => {
+    if (isSticky) {
+      document.body.style.paddingTop = `${navRef.current.offsetHeight}px`;
+    } else {
+      document.body.style.paddingTop = '0';
+    }
+  }, [isSticky]);
 
   const scrollToSection = (e, id) => {
     e.preventDefault();
     const section = document.querySelector(id);
+    const navHeight = navRef.current.offsetHeight;
+    const targetPosition = section.getBoundingClientRect().top + window.pageYOffset - navHeight;
+
     window.scrollTo({
-      top: section.offsetTop - 200,
-      behavior: 'smooth',
+      top: targetPosition,
+      behavior: 'smooth'
     });
   };
 
   return (
-    <nav className={isSticky ? 'sticky' : ''}>
+    <nav 
+      ref={navRef} 
+      className={`nav ${isSticky ? 'sticky' : ''}`}
+    >
       <div className="nav-container">
         <BurgerMenu menuOpen={menuOpen} toggleMenu={toggleMenu} />
         <ul className={menuOpen ? "nav-links open" : "nav-links"}>

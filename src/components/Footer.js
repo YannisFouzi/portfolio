@@ -29,7 +29,7 @@ function Footer() {
            </li>
         </ul>
         <p>
-        <strong>Contactez moi : <h2>yfouzi.dev@gmail.com</h2></strong>
+        <strong>Contactez-moi : <h2>yfouzi.dev@gmail.com</h2></strong>
         </p>
       </div>
     </footer>

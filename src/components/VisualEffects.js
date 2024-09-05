@@ -7,7 +7,7 @@ function VisualEffects() {
   return (
     <aside id="visual-effects">
       <div className="container">
-        <h2>Effet Visuel</h2>
+        <h2>Effets Visuels</h2>
         <ul className="features">
           <li>
             <span>

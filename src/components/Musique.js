@@ -12,7 +12,7 @@ function Musique() {
           <li>
             <span>
        
-              Je <strong>compose</strong> de la musique et des mixs depuis plusieurs années.
+              Je <strong>compose</strong> de la musique et des mix depuis plusieurs années
             </span>
           </li>
           <li>

@@ -14,7 +14,7 @@ function Tournage() {
         <ul className="features">
           <li>
             <span>
-              Pour ma musique, je <strong>réalise</strong> et <strong>monte</strong> des tournages et <strong>gère</strong> une équipe lors de ces projets.
+              Pour ma musique, je <strong>réalise</strong> et <strong>monte</strong> des tournages et <strong>gère</strong> une équipe lors de ces projets
             </span>
           </li>
           <li>

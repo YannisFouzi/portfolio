@@ -45,7 +45,7 @@ function Skills() {
 
           {/* Creative Skills */}
           <div className="skills-column">
-            <h3>Créativité & Productivité</h3>
+          <h3>Créativité &<br />Productivité</h3>
             <ul className="skills-list two-column">
               <li>
               <img src={notionLogo} alt="vercelIcone" className="custom-icon" />

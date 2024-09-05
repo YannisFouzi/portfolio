@@ -9,7 +9,6 @@ import VisualEffects from './components/VisualEffects';
 import Redacteur from './components/Redacteur';
 import Theatre from './components/Theatre';
 import Footer from './components/Footer';
-import NetflixAnimation from './components/NetflixAnimation/NetflixAnimation';
 import Skills from './components/skills/Skills';
 
 function App() {
@@ -24,7 +23,6 @@ function App() {
       <VisualEffects />
       <Redacteur />
       <Theatre />
-      <NetflixAnimation />
       <Footer />
     </>
   );

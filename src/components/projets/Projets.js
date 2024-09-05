@@ -13,39 +13,39 @@ import woocommerce from '../../img/woocommerce.svg';
 function Projets() {
   const projets = [
     {
-      title: 'Sabacc de Kessel',
+      title: 'Sabacc de Kessel (2024)',
       link: 'https://sabacc.fouzi-dev.fr/',
       image: sabaccKessel,
-      description: 'Un jeu en ligne inspiré du célèbre jeu de carte Sabacc de Star Wars',
+      description: 'Un jeu de carte tiré de l\'univers Star Wars',
       technologies: [faReact, faCss3Alt, vercelIcone],
     },
     {
-      title: 'Kekave Shop',
+      title: 'NX Project (2022)',
+      link: 'https://fouzi-dev.fr/NX/',
+      image: nx,
+      description: 'La homepage créée lors de mon altérnance chez NX Creative',
+      technologies: [faReact, faCss3Alt],
+    },
+    {
+      title: 'Kekave Shop (2021)',
       link: 'https://kekaveshop.fouzi-dev.fr/',
       image: kekave, 
       description: 'Un site e-commerce de démonstration de produits pop culture',
       technologies: [faWordpress, woocommerce],
     },
     {
-      title: 'NX Project',
-      link: 'https://fouzi-dev.fr/NX/',
-      image: nx,
-      description: 'Homepage de mon ancienne entreprise',
-      technologies: [faReact, faCss3Alt],
-    },
-    {
-      title: 'Parimis',
-      link: 'https://fouzi-dev.fr/Parimis/',
-      image: parimis,
-      description: 'Un site démonstration d\'un hotel de luxe',
-      technologies: [faHtml5, faCss3Alt, faSquareJs],
-    },
-    {
-      title: 'Annonceo',
+      title: 'Annonceo (2020)',
       link: 'https://fouzi-dev.fr/annonceoPHP/',
       image: annonceo,
-      description: 'Un site démonstration de petites annonces pour la vente entre particuliers',
+      description: 'Un site de démonstration de petites annonces pour la vente entre particuliers',
       technologies: [faPhp, faCss3Alt],
+    },
+    {
+      title: 'Parimis (2020)',
+      link: 'https://fouzi-dev.fr/Parimis/',
+      image: parimis,
+      description: 'Un site de démonstration d\'un hôtel de luxe',
+      technologies: [faHtml5, faCss3Alt, faSquareJs],
     },
   ];
 

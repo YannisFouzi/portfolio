@@ -14,7 +14,7 @@ function Redacteur() {
         <ul className="features">
           <li>
             <span>
-              Depuis 2019, en tant que bénévole, J'<strong>écris</strong> des articles pour un média de musique et j'<strong>interview</strong> des artistes.
+              Depuis 2019, en tant que bénévole, j'<strong>écris</strong> des articles pour un média de musique et j'<strong>interviewe</strong> des artistes
             </span>
           </li>
           <ul className="features-list">

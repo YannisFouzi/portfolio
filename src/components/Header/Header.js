@@ -36,7 +36,7 @@ function Header() {
         <h1>
           <span className="title">Yannis Fouzi</span>
         </h1>
-        <h2>Expert Informatique React</h2>
+        <h2>Spécialiste Développeur React</h2>
         <a href={myCV} download className="link-github">
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
