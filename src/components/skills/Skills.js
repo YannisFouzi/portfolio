@@ -8,6 +8,7 @@ import canvaLogo from '../../img/canva-icon.webp';
 import photoshopLogo from '../../img/Photoshop_icon.png';
 import afterLogo from '../../img/Adobe_After_icon.png';
 import VMware_vSphere_Client from '../../img/VMware_vSphere_Client.png';
+import trello from '../../img/trello.svg';
 import './Skills.css';
 
 function Skills() {
@@ -25,7 +26,7 @@ function Skills() {
                 <span>React</span>
               </li>
               <li>
-              <img src={vercelIcone} alt="vercelIcone" className="custom-icon" />
+              <img src={trello} alt="vercelIcone" className="custom-icon" />
                 <span>Vercel</span>
               </li>
               <li>
@@ -48,23 +49,27 @@ function Skills() {
           <h3>Créativité &<br />Productivité</h3>
             <ul className="skills-list two-column">
               <li>
-              <img src={notionLogo} alt="vercelIcone" className="custom-icon" />
+              <img src={notionLogo} alt="notionIcone" className="custom-icon" />
                 <span>Notion</span>
               </li>
               <li>
-              <img src={canvaLogo} alt="vercelIcone" className="custom-icon" />
+              <img src={afterLogo} alt="trelloIcone" className="custom-icon" />
+                <span>Trello</span>
+              </li>
+              <li>
+              <img src={canvaLogo} alt="canvaIcone" className="custom-icon" />
                 <span>Canva</span>
               </li>
               <li>
-              <img src={vegasProIcon} alt="vercelIcone" className="custom-icon" />
+              <img src={vegasProIcon} alt="vegasproIcone" className="custom-icon" />
                 <span>Vegas Pro (Montage video)</span>
               </li>
               <li>
-              <img src={photoshopLogo} alt="vercelIcone" className="custom-icon" />
+              <img src={photoshopLogo} alt="photoshopIcone" className="custom-icon" />
                 <span>Photoshop</span>
               </li>
               <li>
-              <img src={afterLogo} alt="vercelIcone" className="custom-icon" />
+              <img src={afterLogo} alt="aftereffectsIcone" className="custom-icon" />
                 <span>After Effects</span>
               </li>
             </ul>
