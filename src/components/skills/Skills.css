@@ -71,11 +71,7 @@
     word-wrap: break-word;
 }
 
-.skills-list li:last-child {
-    margin: 1rem auto;
-    width: 50%;
-    text-align: center;
-}
+
 
 /* Rubrique pour chaque catégorie */
 .skills-column h3 {

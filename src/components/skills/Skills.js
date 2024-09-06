@@ -9,6 +9,7 @@ import photoshopLogo from '../../img/Photoshop_icon.png';
 import afterLogo from '../../img/Adobe_After_icon.png';
 import VMware_vSphere_Client from '../../img/VMware_vSphere_Client.png';
 import trello from '../../img/trello.svg';
+import html_css from '../../img/html_css.png';
 import './Skills.css';
 
 function Skills() {
@@ -26,7 +27,7 @@ function Skills() {
                 <span>React</span>
               </li>
               <li>
-              <img src={trello} alt="vercelIcone" className="custom-icon" />
+              <img src={vercelIcone} alt="vercelIcone" className="custom-icon" />
                 <span>Vercel</span>
               </li>
               <li>
@@ -36,6 +37,10 @@ function Skills() {
               <li>
               <FontAwesomeIcon icon={faWordpress} style={{color: "#20759B",}} size="3x" />
                 <span>WordPress (+ WooCommerce)</span>
+              </li>
+              <li>
+              <img src={html_css} alt="vercelIcone" className="custom-icon" />
+                <span>HTML & CSS</span>
               </li>
               <li>
               <img src={VMware_vSphere_Client} alt="vercelIcone" className="custom-icon" />
@@ -53,7 +58,7 @@ function Skills() {
                 <span>Notion</span>
               </li>
               <li>
-              <img src={afterLogo} alt="trelloIcone" className="custom-icon" />
+              <img src={trello} alt="trelloIcone" className="custom-icon" />
                 <span>Trello</span>
               </li>
               <li>
