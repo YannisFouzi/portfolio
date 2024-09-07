@@ -46,7 +46,7 @@ function Redacteur() {
         <ul className="features">
           <li>
             <span>
-              J'ai aussi réalisé un projet agenda sur <strong>Notion</strong> accompagné d'un mockup confectionné sur <strong>Canva</strong>.
+              Toujours avec mon média, j'ai réalisé un projet d'agenda avec toutes les sorties musicales et événements (concerts/festivals) sur <strong>Notion,</strong> accompagné d'un mockup confectionné sur <strong>Canva</strong>. 
             </span>
           </li>
           <img 
