@@ -3,11 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router } from 'react-router-dom'; // Importer le Router
+import ReactGA from 'react-ga';
+
+// Initialiser Google Analytics
+ReactGA.initialize('G-Z8QS08ZWBQ');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Router> {/* Envelopper App dans Router */}
+      <App />
+    </Router>
   </React.StrictMode>
 );
 
