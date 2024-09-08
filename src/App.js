@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';  // Ajouter useEffect ici
 import './index.css';
 import Header from './components/Header/Header';
 import Nav from './components/nav/Nav';
