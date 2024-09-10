@@ -50,7 +50,7 @@ function Projets() {
     },
     {
       title: 'Tafraout (2018)',
-      link: 'https://parimis.fouzi-dev.fr/',
+      link: 'https://tafraout.fouzi-dev.fr/',
       image: tafraout,
       description: 'Mon premier vrai site effectué lors de mon stage en BTS pour un restaurant',
       technologies: [faHtml5, faCss3Alt, faSquareJs],
