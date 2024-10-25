@@ -31,11 +31,17 @@
 .technologies-icons {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   margin: 1rem 0;
 }
 
+img[src*="cloudinary"] {
+  border-radius: 20px;
+}
 
-.technologies-icons svg {
+.technologies-icons svg,
+.technologies-icons img {
   color: var(--color-dark-blue);
   transition: transform 0.2s;
 }
