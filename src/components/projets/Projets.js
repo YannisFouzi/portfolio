@@ -52,7 +52,7 @@ function Projets() {
       link: "https://twitch-planning-sandy.vercel.app/",
       image: twitch,
       description:
-        "Une application permettant aux utilisateurs d'avoir à un planning des lives Twitch de leur streamer préféré (Projet en cours de développement)",
+        "Une application permettant aux utilisateurs d'avoir un planning des lives Twitch de leur streamer préféré (Projet en cours de développement)",
       technologies: [faReact, faCss3Alt, vercelIcone],
     },
     {
