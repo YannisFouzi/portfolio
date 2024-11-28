@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Back, gsap } from "gsap";
 import React, { useEffect, useState } from "react";
 import ReactGA from "react-ga4"; // Import GA4
-import myCV from "../pdf/Yannis fouzi_CV_Decembre2024.pdf";
+import myCV from "../pdf/Yannis fouzi_CV_2024v2.pdf";
 import "./Header.css";
 
 function Header() {
