@@ -57,11 +57,11 @@ function Projets() {
     },
     {
       title: "Sabacc de Kessel (2024)",
-      link: "https://sabacc.fouzi-dev.fr/",
+      link: "https://sabacc-kessel-v2-sandy.vercel.app/",
       image: sabaccKessel,
       description:
         "Un jeu de carte tiré de l'univers Star Wars (Projet en cours de développement)",
-      technologies: [faReact, faCss3Alt, vercelIcone],
+      technologies: [faReact, faCss3Alt, tailwindcssIcon, vercelIcone],
     },
     {
       title: "NX Project (2022)",
