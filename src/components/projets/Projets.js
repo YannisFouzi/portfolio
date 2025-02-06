@@ -16,13 +16,14 @@ import mercilille from "../../img/merci-lille.png";
 import mongo from "../../img/mongo.webp";
 import nx from "../../img/nx.png";
 import parimis from "../../img/parimis.png";
-import railway from "../../img/railway.webp";
+import render from "../../img/render.png";
 import sabaccKessel from "../../img/sabacc-kessel.png";
 import tafraout from "../../img/tafraout.png";
 import tagManager from "../../img/tag_manager.png";
 import tailwindcssIcon from "../../img/tailwindcss-icon.svg";
 import twitch from "../../img/twitch.png";
 import typescript from "../../img/Typescript.png";
+import uptimerobot from "../../img/uptimerobot.svg";
 import vercelIcone from "../../img/vercel_icone.png";
 import woocommerce from "../../img/woocommerce.svg";
 import "./Projets.css";
@@ -34,18 +35,25 @@ function Projets() {
       link: "https://mercilille.com/",
       image: mercilille,
       description:
-        "Le portfolio de mon assocation Merci Lille, avec un backend sur Railway pour ajouter et modifier les événements",
-      technologies: [
-        faReact,
-        typescript,
-        tailwindcssIcon,
-        vercelIcone,
-        cloudinary,
-        railway,
-        mongo,
-        googleAnalytics,
-        tagManager,
-      ],
+        "Le portfolio de mon assocation Merci Lille, avec un backend sur Render pour ajouter et modifier les événements/photos",
+      technologies: {
+        frontend: [
+          { icon: faReact, name: "React" },
+          { icon: typescript, name: "TypeScript" },
+          { icon: tailwindcssIcon, name: "Tailwind CSS" },
+        ],
+        backend: [
+          { icon: mongo, name: "MongoDB" },
+          { icon: render, name: "Render" },
+          { icon: uptimerobot, name: "Uptime Robot" },
+        ],
+        autres: [
+          { icon: vercelIcone, name: "Vercel" },
+          { icon: cloudinary, name: "Cloudinary" },
+          { icon: googleAnalytics, name: "Google Analytics" },
+          { icon: tagManager, name: "Tag Manager" },
+        ],
+      },
     },
     {
       title: "Planning Twitch (2024)",
@@ -53,7 +61,13 @@ function Projets() {
       image: twitch,
       description:
         "Une application permettant aux utilisateurs d'avoir un planning des lives Twitch de leur streamer préféré (Projet en cours de développement)",
-      technologies: [faReact, faCss3Alt, vercelIcone],
+      technologies: {
+        frontend: [
+          { icon: faReact, name: "React" },
+          { icon: faCss3Alt, name: "CSS" },
+        ],
+        autres: [{ icon: vercelIcone, name: "Vercel" }],
+      },
     },
     {
       title: "Sabacc de Kessel (2024)",
@@ -61,14 +75,26 @@ function Projets() {
       image: sabaccKessel,
       description:
         "Un jeu de carte tiré de l'univers Star Wars (Projet en cours de développement)",
-      technologies: [faReact, faCss3Alt, tailwindcssIcon, vercelIcone],
+      technologies: {
+        frontend: [
+          { icon: faReact, name: "React" },
+          { icon: faCss3Alt, name: "CSS" },
+          { icon: tailwindcssIcon, name: "Tailwind CSS" },
+        ],
+        autres: [{ icon: vercelIcone, name: "Vercel" }],
+      },
     },
     {
       title: "NX Project (2022)",
       link: "https://nx.fouzi-dev.fr/",
       image: nx,
       description: "La homepage créée lors de mon alternance chez NX Creative",
-      technologies: [faReact, faCss3Alt],
+      technologies: {
+        frontend: [
+          { icon: faReact, name: "React" },
+          { icon: faCss3Alt, name: "CSS" },
+        ],
+      },
     },
     {
       title: "Kekave Shop (2021)",
@@ -76,7 +102,12 @@ function Projets() {
       image: kekave,
       description:
         "Un site e-commerce de démonstration de produits pop culture",
-      technologies: [faWordpress, woocommerce],
+      technologies: {
+        frontend: [
+          { icon: faWordpress, name: "WordPress" },
+          { icon: woocommerce, name: "Woocommerce" },
+        ],
+      },
     },
     {
       title: "Annonceo (2020)",
@@ -84,14 +115,25 @@ function Projets() {
       image: annonceo,
       description:
         "Un site de démonstration de petites annonces pour la vente entre particuliers",
-      technologies: [faPhp, faCss3Alt],
+      technologies: {
+        frontend: [
+          { icon: faPhp, name: "PHP" },
+          { icon: faCss3Alt, name: "CSS" },
+        ],
+      },
     },
     {
       title: "Parimis (2020)",
       link: "https://parimis.fouzi-dev.fr/",
       image: parimis,
       description: "Un site de démonstration d'un hôtel de luxe",
-      technologies: [faHtml5, faCss3Alt, faSquareJs],
+      technologies: {
+        frontend: [
+          { icon: faHtml5, name: "HTML5" },
+          { icon: faCss3Alt, name: "CSS" },
+          { icon: faSquareJs, name: "JavaScript" },
+        ],
+      },
     },
     {
       title: "Tafraout (2018)",
@@ -99,7 +141,13 @@ function Projets() {
       image: tafraout,
       description:
         "Mon premier vrai site effectué lors de mon stage en BTS pour un restaurant",
-      technologies: [faHtml5, faCss3Alt, faSquareJs],
+      technologies: {
+        frontend: [
+          { icon: faHtml5, name: "HTML5" },
+          { icon: faCss3Alt, name: "CSS" },
+          { icon: faSquareJs, name: "JavaScript" },
+        ],
+      },
     },
   ];
 
@@ -120,23 +168,32 @@ function Projets() {
               <p>
                 <strong>Technologies</strong>
               </p>
-              <div className="technologies-icons">
-                {projet.technologies.map((tech, i) =>
-                  typeof tech === "string" ? (
-                    <img
-                      key={i}
-                      src={tech}
-                      alt="Technology logo"
-                      className="tech-icon"
-                    />
-                  ) : (
-                    <FontAwesomeIcon
-                      key={i}
-                      icon={tech}
-                      size="2x"
-                      style={{ margin: "0 10px" }}
-                    />
-                  )
+              <div className="technologies-container">
+                {Object.entries(projet.technologies).map(
+                  ([category, techs]) =>
+                    techs.length > 0 && (
+                      <div key={category} className="tech-category">
+                        <h4>
+                          {category.charAt(0).toUpperCase() + category.slice(1)}
+                        </h4>
+                        <div className="technologies-icons">
+                          {techs.map((tech, i) => (
+                            <div key={i} className="tech-item">
+                              {typeof tech.icon === "string" ? (
+                                <img
+                                  src={tech.icon}
+                                  alt={tech.name}
+                                  className="tech-icon"
+                                />
+                              ) : (
+                                <FontAwesomeIcon icon={tech.icon} size="2x" />
+                              )}
+                              <span className="tech-name">{tech.name}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )
                 )}
               </div>
               <a

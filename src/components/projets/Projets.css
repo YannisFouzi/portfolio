@@ -70,3 +70,40 @@ img[src*="cloudinary"] {
     padding: 1rem;
   }
 }
+
+.technologies-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.tech-category h4 {
+  margin-bottom: 0.5rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.technologies-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tech-name {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.tech-icon {
+  width: 2em;
+  height: 2em;
+}
