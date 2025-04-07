@@ -1,16 +1,20 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faGithub, faWordpress } from '@fortawesome/free-brands-svg-icons'; 
-import vegasProIcon from '../../img/vegas-pro.png';
-import vercelIcone from '../../img/vercel_icone.png';
-import notionLogo from '../../img/Notion-logo.png';
-import canvaLogo from '../../img/canva-icon.webp';
-import photoshopLogo from '../../img/Photoshop_icon.png';
-import afterLogo from '../../img/Adobe_After_icon.png';
-import VMware_vSphere_Client from '../../img/VMware_vSphere_Client.png';
-import trello from '../../img/trello.svg';
-import html_css from '../../img/html_css.png';
-import './Skills.css';
+import {
+  faGithub,
+  faReact,
+  faWordpress,
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
+import afterLogo from "../../img/Adobe_After_icon.png";
+import premierePro from "../../img/Adobe_Premiere.png";
+import canvaLogo from "../../img/canva-icon.webp";
+import html_css from "../../img/html_css.png";
+import notionLogo from "../../img/Notion-logo.png";
+import photoshopLogo from "../../img/Photoshop_icon.png";
+import trello from "../../img/trello.svg";
+import vercelIcone from "../../img/vercel_icone.png";
+import VMware_vSphere_Client from "../../img/VMware_vSphere_Client.png";
+import "./Skills.css";
 
 function Skills() {
   return (
@@ -23,11 +27,19 @@ function Skills() {
             <h3>Développement & infrastructure</h3>
             <ul className="skills-list two-column">
               <li>
-              <FontAwesomeIcon icon={faReact} size="3x" style={{color: "#58C4DC",}} />
+                <FontAwesomeIcon
+                  icon={faReact}
+                  size="3x"
+                  style={{ color: "#58C4DC" }}
+                />
                 <span>React</span>
               </li>
               <li>
-              <img src={vercelIcone} alt="vercelIcone" className="custom-icon" />
+                <img
+                  src={vercelIcone}
+                  alt="vercelIcone"
+                  className="custom-icon"
+                />
                 <span>Vercel</span>
               </li>
               <li>
@@ -35,15 +47,23 @@ function Skills() {
                 <span>GitHub</span>
               </li>
               <li>
-              <FontAwesomeIcon icon={faWordpress} style={{color: "#20759B",}} size="3x" />
+                <FontAwesomeIcon
+                  icon={faWordpress}
+                  style={{ color: "#20759B" }}
+                  size="3x"
+                />
                 <span>WordPress (+ WooCommerce)</span>
               </li>
               <li>
-              <img src={html_css} alt="vercelIcone" className="custom-icon" />
+                <img src={html_css} alt="vercelIcone" className="custom-icon" />
                 <span>HTML & CSS</span>
               </li>
               <li>
-              <img src={VMware_vSphere_Client} alt="vercelIcone" className="custom-icon" />
+                <img
+                  src={VMware_vSphere_Client}
+                  alt="vercelIcone"
+                  className="custom-icon"
+                />
                 <span>vSphere (Virtualisation de serveur physique)</span>
               </li>
             </ul>
@@ -51,30 +71,49 @@ function Skills() {
 
           {/* Creative Skills */}
           <div className="skills-column">
-          <h3>Créativité &<br />Productivité</h3>
+            <h3>
+              Créativité &<br />
+              Productivité
+            </h3>
             <ul className="skills-list two-column">
               <li>
-              <img src={notionLogo} alt="notionIcone" className="custom-icon" />
+                <img
+                  src={notionLogo}
+                  alt="notionIcone"
+                  className="custom-icon"
+                />
                 <span>Notion</span>
               </li>
               <li>
-              <img src={trello} alt="trelloIcone" className="custom-icon" />
+                <img src={trello} alt="trelloIcone" className="custom-icon" />
                 <span>Trello</span>
               </li>
               <li>
-              <img src={canvaLogo} alt="canvaIcone" className="custom-icon" />
+                <img src={canvaLogo} alt="canvaIcone" className="custom-icon" />
                 <span>Canva</span>
               </li>
               <li>
-              <img src={vegasProIcon} alt="vegasproIcone" className="custom-icon" />
-                <span>Vegas Pro (Montage video)</span>
+                <img
+                  src={premierePro}
+                  alt="premiereProIcone"
+                  className="custom-icon"
+                />
+                <span>Premiere Pro</span>
               </li>
               <li>
-              <img src={photoshopLogo} alt="photoshopIcone" className="custom-icon" />
+                <img
+                  src={photoshopLogo}
+                  alt="photoshopIcone"
+                  className="custom-icon"
+                />
                 <span>Photoshop</span>
               </li>
               <li>
-              <img src={afterLogo} alt="aftereffectsIcone" className="custom-icon" />
+                <img
+                  src={afterLogo}
+                  alt="aftereffectsIcone"
+                  className="custom-icon"
+                />
                 <span>After Effects</span>
               </li>
             </ul>
