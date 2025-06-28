@@ -38,7 +38,7 @@ function VisualEffects() {
           href="https://mercilille.com/"
           className="link-allstyles"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer nofollow"
         >
           <FontAwesomeIcon
             icon={faPeopleGroup}

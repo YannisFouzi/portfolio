@@ -11,7 +11,21 @@ function Header() {
 
   useEffect(() => {
     const title = document.querySelector(".title");
-    title.innerHTML = title.textContent.replace(/(\S)/g, "<span>$1</span>");
+    // Sécurisation : utilisation de textContent pour éviter l'injection
+    const text = title.textContent;
+    title.textContent = ""; // Vider le contenu
+
+    // Créer les spans de manière sécurisée
+    text.split("").forEach((char) => {
+      if (char.trim()) {
+        // Ignorer les espaces
+        const span = document.createElement("span");
+        span.textContent = char; // Utiliser textContent au lieu d'innerHTML
+        title.appendChild(span);
+      } else {
+        title.appendChild(document.createTextNode(char));
+      }
+    });
 
     // Animation : les lettres apparaissent par le bas
     gsap.fromTo(

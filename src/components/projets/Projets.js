@@ -164,7 +164,7 @@ function Projets() {
                 alt={`Screenshot du projet ${projet.title}`}
                 className="project-image"
               />
-              <p dangerouslySetInnerHTML={{ __html: projet.description }}></p>
+              <p>{projet.description}</p>
               <p>
                 <strong>Technologies</strong>
               </p>
@@ -200,7 +200,7 @@ function Projets() {
                 href={projet.link}
                 className="link-allstyles"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
               >
                 Accéder au projet
               </a>

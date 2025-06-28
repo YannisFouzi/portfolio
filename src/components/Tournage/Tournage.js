@@ -32,7 +32,7 @@ function Tournage() {
           href="https://www.youtube.com/@rapture-music/videos"
           className="link-allstyles"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer nofollow"
         >
           <FontAwesomeIcon
             icon={faYoutube}
