@@ -141,7 +141,6 @@ function Projets() {
           { icon: typescript, name: "TypeScript" },
           { icon: tailwindcssIcon, name: "Tailwind CSS" },
           { icon: vite, name: "Vite" },
-          { icon: next, name: "Next" },
         ],
         backend: [
           { icon: node, name: "Node.js" },
