@@ -10,37 +10,114 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import annonceo from "../../img/annonceo.png";
 import cloudinary from "../../img/cloudinary.jpg";
+import jeu from "../../img/devineLeJeu.png";
+import firebase from "../../img/firebase.png";
+import framerMotion from "../../img/framerMotion.svg";
+import gameRoom from "../../img/gameroom.png";
 import googleAnalytics from "../../img/google_analytics.webp";
+import harry from "../../img/harry.png";
 import kekave from "../../img/kekave.png";
 import mercilille from "../../img/merci-lille.png";
 import mongo from "../../img/mongo.webp";
+import next from "../../img/nextjs-icon.svg";
 import nx from "../../img/nx.png";
 import parimis from "../../img/parimis.png";
+import pokemon from "../../img/pokelille.png";
+import rawg from "../../img/rawg.jpeg";
 import render from "../../img/render.png";
 import sabaccKessel from "../../img/sabacc-kessel.png";
+import spotify from "../../img/spotify.png";
 import tafraout from "../../img/tafraout.png";
 import tagManager from "../../img/tag_manager.png";
 import tailwindcssIcon from "../../img/tailwindcss-icon.svg";
 import twitch from "../../img/twitch.png";
+import twitchLogo from "../../img/twitch_logo.png";
 import typescript from "../../img/Typescript.png";
 import uptimerobot from "../../img/uptimerobot.svg";
 import vercelIcone from "../../img/vercel_icone.png";
+import vite from "../../img/Vite_icon.png";
 import woocommerce from "../../img/woocommerce.svg";
 import "./Projets.css";
 
 function Projets() {
   const projets = [
     {
-      title: "Portfolio Merci Lille (2024)",
-      link: "https://mercilille.com/",
-      image: mercilille,
+      title: "Devine le jeu vidéo (2025)",
+      link: "https://1jour1jeu.vercel.app/",
+      image: jeu,
       description:
-        "Le portfolio de mon assocation Merci Lille, avec un backend sur Render pour ajouter et modifier les événements/photos",
+        "Jeu de devinettes où les joueurs doivent deviner un jeu vidéo mystère en utilisant des indices progressifs qui se révèlent à chaque tentative",
+      technologies: {
+        frontend: [
+          { icon: faReact, name: "React" },
+          { icon: faCss3Alt, name: "CSS" },
+        ],
+        API: [{ icon: rawg, name: "RAWG" }],
+        autres: [{ icon: vercelIcone, name: "Vercel" }],
+      },
+    },
+    {
+      title: "Blind test Harry Potter & Star Wars (2025)",
+      link: "https://harrypotter-blindtest.vercel.app/",
+      image: harry,
+      description:
+        "Un blind test interfactif sur les films Harry Potter et Star Wars via l'api de Spotify",
       technologies: {
         frontend: [
           { icon: faReact, name: "React" },
           { icon: typescript, name: "TypeScript" },
           { icon: tailwindcssIcon, name: "Tailwind CSS" },
+          { icon: next, name: "Next" },
+        ],
+        API: [{ icon: spotify, name: "Spotify" }],
+        autres: [{ icon: vercelIcone, name: "Vercel" }],
+      },
+    },
+    {
+      title: "Animation Cartes Pokémon (2025)",
+      link: "https://pokelille.vercel.app/",
+      image: pokemon,
+      description:
+        'Simulation d\'ouverture de boosters de cartes Pokémon personnalisées avec effets holographiques pour mon asso "Merci Lille"',
+      technologies: {
+        frontend: [
+          { icon: faReact, name: "React" },
+          { icon: typescript, name: "TypeScript" },
+          { icon: tailwindcssIcon, name: "Tailwind CSS" },
+          { icon: vite, name: "Vite" },
+        ],
+        autres: [{ icon: vercelIcone, name: "Vercel" }],
+      },
+    },
+    {
+      title: "Game Room (2025)",
+      link: "https://gameroom.fouzi-dev.fr/",
+      image: gameRoom,
+      description:
+        "Jeu web multijoueurs qui permet de créer des salles de jeu privées pour jouer à plusieurs mini-jeux interactifs (Millionnaire, Undercover, Roue de la Fortune, Rat de Star) entre amis via QR code avec les téléphones comme télécomande",
+      technologies: {
+        frontend: [
+          { icon: faReact, name: "React" },
+          { icon: typescript, name: "TypeScript" },
+          { icon: tailwindcssIcon, name: "Tailwind CSS" },
+          { icon: framerMotion, name: "Framer Motion" },
+        ],
+        backend: [{ icon: firebase, name: "Firebase" }],
+        autres: [{ icon: vercelIcone, name: "Vercel" }],
+      },
+    },
+    {
+      title: "Portfolio Merci Lille (2024)",
+      link: "https://mercilille.com/",
+      image: mercilille,
+      description:
+        "Le portfolio de mon assocation d'organistion d'événements de musique \"Merci Lille\", avec un backend sur Render pour ajouter et modifier les événements/photos",
+      technologies: {
+        frontend: [
+          { icon: faReact, name: "React" },
+          { icon: typescript, name: "TypeScript" },
+          { icon: tailwindcssIcon, name: "Tailwind CSS" },
+          { icon: next, name: "Next" },
         ],
         backend: [
           { icon: mongo, name: "MongoDB" },
@@ -66,6 +143,7 @@ function Projets() {
           { icon: faReact, name: "React" },
           { icon: faCss3Alt, name: "CSS" },
         ],
+        API: [{ icon: twitchLogo, name: "Twitch" }],
         autres: [{ icon: vercelIcone, name: "Vercel" }],
       },
     },
@@ -78,7 +156,6 @@ function Projets() {
       technologies: {
         frontend: [
           { icon: faReact, name: "React" },
-          { icon: faCss3Alt, name: "CSS" },
           { icon: tailwindcssIcon, name: "Tailwind CSS" },
         ],
         autres: [{ icon: vercelIcone, name: "Vercel" }],
