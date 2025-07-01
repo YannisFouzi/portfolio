@@ -19,6 +19,7 @@ import harry from "../../img/harry.png";
 import kekave from "../../img/kekave.png";
 import mercilille from "../../img/merci-lille.png";
 import mongo from "../../img/mongo.webp";
+import mysql from "../../img/mysql.png";
 import next from "../../img/nextjs-icon.svg";
 import nx from "../../img/nx.png";
 import parimis from "../../img/parimis.png";
@@ -197,6 +198,8 @@ function Projets() {
           { icon: faPhp, name: "PHP" },
           { icon: faCss3Alt, name: "CSS" },
         ],
+
+        backend: [{ icon: mysql, name: "MySQL" }],
       },
     },
     {
