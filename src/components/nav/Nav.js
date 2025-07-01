@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
-import BurgerMenu from './BurgerMenu';
-import './Nav.css';
+import React, { useCallback, useEffect, useRef, useState } from "react";
+import BurgerMenu from "./BurgerMenu";
+import "./Nav.css";
 
 function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,7 +22,13 @@ function Nav() {
         }
 
         const scrollPosition = window.scrollY;
-        const shouldBeSticky = scrollPosition > initialNavPositionRef.current;
+        const threshold = 50; // Zone tampon de 50px pour éviter les changements abruptes
+        const triggerPoint = initialNavPositionRef.current + threshold;
+
+        // Logique améliorée avec hystérésis pour éviter le clignotement
+        const shouldBeSticky = isSticky
+          ? scrollPosition > triggerPoint - threshold // Si déjà sticky, désactiver plus tôt
+          : scrollPosition > triggerPoint; // Si pas sticky, activer plus tard
 
         if (shouldBeSticky !== isSticky) {
           setIsSticky(shouldBeSticky);
@@ -36,19 +42,19 @@ function Nav() {
   }, [isSticky]);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
     const handleResize = () => {
       initialNavPositionRef.current = null;
       handleScroll();
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     handleScroll();
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
     };
   }, [handleScroll]);
 
@@ -56,7 +62,7 @@ function Nav() {
     if (isSticky) {
       document.body.style.paddingTop = `${navRef.current.offsetHeight}px`;
     } else {
-      document.body.style.paddingTop = '0';
+      document.body.style.paddingTop = "0";
     }
   }, [isSticky]);
 
@@ -64,29 +70,67 @@ function Nav() {
     e.preventDefault();
     const section = document.querySelector(id);
     const navHeight = navRef.current.offsetHeight;
-    const targetPosition = section.getBoundingClientRect().top + window.pageYOffset - navHeight;
+    const targetPosition =
+      section.getBoundingClientRect().top + window.pageYOffset - navHeight;
 
     window.scrollTo({
       top: targetPosition,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   };
 
   return (
-    <nav 
-      ref={navRef} 
-      className={`nav ${isSticky ? 'sticky' : ''}`}
-    >
+    <nav ref={navRef} className={`nav ${isSticky ? "sticky" : ""}`}>
       <div className="nav-container">
         <BurgerMenu menuOpen={menuOpen} toggleMenu={toggleMenu} />
         <ul className={menuOpen ? "nav-links open" : "nav-links"}>
-          <li><a href="#competences" onClick={(e) => scrollToSection(e, '#competences')}>Compétences</a></li>
-          <li><a href="#projets" onClick={(e) => scrollToSection(e, '#projets')}>Projets web</a></li>
-          <li><a href="#musique" onClick={(e) => scrollToSection(e, '#musique')}>Musique</a></li>
-          <li><a href="#tournage" onClick={(e) => scrollToSection(e, '#tournage')}>Tournage vidéo</a></li>
-          <li><a href="#visual-effects" onClick={(e) => scrollToSection(e, '#visual-effects')}>Effets Visuels</a></li>
-          <li><a href="#redacteur" onClick={(e) => scrollToSection(e, '#redacteur')}>Rédaction</a></li>
-          <li><a href="#theatre" onClick={(e) => scrollToSection(e, '#theatre')}>Théâtre</a></li>
+          <li>
+            <a
+              href="#competences"
+              onClick={(e) => scrollToSection(e, "#competences")}
+            >
+              Compétences
+            </a>
+          </li>
+          <li>
+            <a href="#projets" onClick={(e) => scrollToSection(e, "#projets")}>
+              Projets web
+            </a>
+          </li>
+          <li>
+            <a href="#musique" onClick={(e) => scrollToSection(e, "#musique")}>
+              Musique
+            </a>
+          </li>
+          <li>
+            <a
+              href="#tournage"
+              onClick={(e) => scrollToSection(e, "#tournage")}
+            >
+              Tournage vidéo
+            </a>
+          </li>
+          <li>
+            <a
+              href="#visual-effects"
+              onClick={(e) => scrollToSection(e, "#visual-effects")}
+            >
+              Effets Visuels
+            </a>
+          </li>
+          <li>
+            <a
+              href="#redacteur"
+              onClick={(e) => scrollToSection(e, "#redacteur")}
+            >
+              Rédaction
+            </a>
+          </li>
+          <li>
+            <a href="#theatre" onClick={(e) => scrollToSection(e, "#theatre")}>
+              Théâtre
+            </a>
+          </li>
         </ul>
       </div>
     </nav>

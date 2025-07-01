@@ -1,111 +1,209 @@
 nav ul {
-    margin: 0;
-    padding: 0.125rem;
-    list-style: none;
-    font-size: 1.25rem;
-    border: 0.25rem solid var(--color-black);
-    background-color: var(--color-red);
-  }
-  
-  @media (min-width: 540px) {
-    nav ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  }
-  
-  nav ul li {
-    margin: 0.375rem 0.375rem 0.5rem;
-    text-align: center;
-  }
-  
-  @media (min-width: 540px) {
-    nav ul li {
-      flex: 1 0 45%;
-    }
-  }
-  
-  @media (min-width: 600px) {
-    nav ul li {
-      flex: 1 0 30%;
-    }
-  }
-  
-  @media (min-width: 940px) {
-    nav ul li {
-      flex: 1 0 auto;
-    }
-  }
-  
-  nav ul a {
-    position: relative;
-    display: block;
-    padding: 0.5em;
-    color: var(--color-white);
-    font-size: 1.25rem;
-    font-weight: var(--font-weight-semibold);
-    border: 0.1875rem solid var(--color-red);
-    border-radius: 2em;
-    text-decoration: none;
-    padding: 0.25em;
-  }
-  
-  nav ul a:hover {
-    background-color: var(--color-dark-red);
-    border-color: var(--color-black);
-  }
-  
-  nav ul a:focus {
-    background-color: var(--color-dark-red);
-  }
-  
-  
-  nav {
-    position: relative;
-    width: 100%;
-    z-index: 1000;
-  }
-  
-  .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 55rem;
-    margin: 0 auto;
-  }
-  
-  /* Style sticky pour la navigation */
-  nav.sticky {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 65rem;
-    z-index: 1000;
-  }
-  
-  /* Style pour les éléments de la liste de navigation */
+  margin: 0;
+  padding: 0.125rem;
+  list-style: none;
+  font-size: 1.25rem;
+  border: 0.25rem solid var(--color-black);
+  background-color: var(--color-red);
+}
+
+@media (min-width: 540px) {
   nav ul {
-    margin: 0;
-    padding: 0.125rem;
-    list-style: none;
-    font-size: 1.25rem;
-    border: 0.25rem solid var(--color-black);
-    background-color: var(--color-red);
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
   }
-  
+}
+
+nav ul li {
+  margin: 0.375rem 0.375rem 0.5rem;
+  text-align: center;
+}
+
+@media (min-width: 540px) {
   nav ul li {
-    flex: 1 0 22%; /* 4 items in the first row */
-    margin: 0.375rem;
-    text-align: center;
+    flex: 1 0 auto; /* Permettre l'ajustement automatique */
   }
-  
+}
+
+@media (min-width: 600px) {
+  nav ul li {
+    flex: 1 0 auto; /* Maintenir l'ajustement automatique */
+  }
+
   nav ul a {
+    font-size: 1.05rem; /* Taille intermédiaire pour les écrans moyens */
+  }
+}
+
+@media (min-width: 940px) {
+  nav ul li {
+    flex: 1 0 auto;
+  }
+
+  nav ul a {
+    font-size: 1.1rem; /* Légèrement plus grand sur les grands écrans */
+    padding: 0.5em 1em;
+  }
+}
+
+/* Styles supprimés - définis plus bas pour éviter les conflits */
+
+nav {
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 65rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Sur mobile, remettre le burger menu à gauche */
+@media (max-width: 768px) {
+  .nav-container {
+    justify-content: flex-start;
+    max-width: none;
+    margin: 0;
+    padding: 0 1rem;
+    position: relative;
+    overflow: visible;
+  }
+}
+
+/* Style sticky pour la navigation */
+nav.sticky {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 65rem;
+  z-index: 1000;
+}
+
+/* Animation supprimée pour éviter l'effet de glissement */
+
+/* Style pour les éléments de la liste de navigation */
+nav ul {
+  margin: 0;
+  padding: 0.125rem;
+  list-style: none;
+  font-size: 1.25rem;
+  border: 0.25rem solid var(--color-black);
+  background-color: var(--color-red);
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  max-width: fit-content;
+  border-radius: 2rem;
+}
+
+/* Sur mobile, remettre les styles normaux pour la navbar */
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* La navbar classique est cachée sur mobile */
+  }
+}
+
+nav ul li {
+  flex: 1 0 auto; /* Permettre aux éléments de s'ajuster automatiquement */
+  margin: 0.2rem; /* Réduire les marges pour optimiser l'espace */
+  text-align: center;
+  min-width: 0; /* Permettre la réduction en dessous de la taille du contenu */
+}
+
+nav ul a {
+  display: block;
+  padding: 0.4em 0.8em; /* Réduire légèrement le padding */
+  color: var(--color-white);
+  font-size: 1rem; /* Réduire la taille de police pour optimiser l'espace */
+  font-weight: var(--font-weight-semibold);
+  border: 0.1875rem solid var(--color-red);
+  border-radius: 2em;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap; /* Empêcher le retour à la ligne du texte */
+}
+
+nav ul a:hover {
+  background-color: var(--color-dark-red);
+  border-color: var(--color-black);
+}
+
+.menu {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--color-white);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Afficher le bouton burger uniquement sur les petits écrans */
+@media (max-width: 768px) {
+  nav {
+    justify-content: flex-start;
+  }
+
+  .burger-menu {
+    font-size: 1.5rem;
+    background-color: white !important;
+    border: 2px solid black !important;
+    color: var(--color-black) !important;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    padding: 0.25rem !important;
+    border-radius: 0.375rem !important;
+    z-index: 1001 !important; /* S'assurer que le bouton soit au-dessus des autres éléments */
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100vw;
+    min-width: 100vw;
+    background-color: var(--color-red);
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    margin: 0;
+    padding: 0.125rem;
+    border: 0.25rem solid var(--color-black);
+    border-top: none;
+    box-sizing: border-box;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+  }
+
+  .nav-links li {
+    flex: none;
+  }
+
+  .nav-links li {
+    margin: 0.375rem 0.375rem 0.5rem;
+    text-align: center;
+    width: calc(100% - 0.75rem);
+  }
+
+  .nav-links li a {
     display: block;
     padding: 0.5em;
     color: var(--color-white);
@@ -116,108 +214,52 @@ nav ul {
     text-decoration: none;
     text-align: center;
   }
-  
-  nav ul a:hover {
-    background-color: var(--color-dark-red);
-    border-color: var(--color-black);
-  }
-  
+
   .menu {
-    display: none;
-    font-size: 2rem;
-    background: none;
+    background-color: transparent;
     border: none;
-    color: var(--color-white);
     cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+    display: flex;
+    padding: 0;
   }
-  
+}
 
-  
-  /* Afficher le bouton burger uniquement sur les petits écrans */
-  @media (max-width: 768px) {
-    .burger-menu {
-      font-size: 1.5rem;
-      background-color: white !important;
-      border: 2px solid black !important;
-      color: var(--color-black) !important; 
-      cursor: pointer;
-      transition: transform 0.3s ease-in-out;
-      padding: 0.25rem !important;
-      border-radius: 0.375rem !important;
-      z-index: 1001 !important; /* S'assurer que le bouton soit au-dessus des autres éléments */
-    }
-  
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      background-color: var(--color-red);
-      position: absolute;
-      top: 100%;
-      left: 0;
-      z-index: 999;
-    }
-  
-    .nav-links.open {
-      display: flex;
-    }
+/* Style pour le menu burger */
 
-    nav ul li {
-      flex: 1 0 45%;
-    }
-  
-    .nav-links li {
-      margin: 0.5rem 0;
-    }
-  
-    .menu {
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-      display: flex;
-      padding: 0;
-    }
-  }
-  
-  /* Style pour le menu burger */
-  
-  
-  .line {
-    fill: none;
-    stroke: black;
-    stroke-width: 6;
-    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  .line1 {
-    stroke-dasharray: 60 207;
-    stroke-width: 6;
-  }
-  
-  .line2 {
-    stroke-dasharray: 60 60;
-    stroke-width: 6;
-  }
-  
-  .line3 {
-    stroke-dasharray: 60 207;
-    stroke-width: 6;
-  }
-  
-  .opened .line1 {
-    stroke-dasharray: 90 207;
-    stroke-dashoffset: -134;
-  }
-  
-  .opened .line2 {
-    stroke-dasharray: 1 60;
-    stroke-dashoffset: -30;
-  }
-  
-  .opened .line3 {
-    stroke-dasharray: 90 207;
-    stroke-dashoffset: -134;
-  }
-  
+.line {
+  fill: none;
+  stroke: black;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+}
+
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+}
+
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+}
