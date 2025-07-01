@@ -11,6 +11,7 @@ import React from "react";
 import annonceo from "../../img/annonceo.png";
 import cloudinary from "../../img/cloudinary.jpg";
 import jeu from "../../img/devineLeJeu.png";
+import express from "../../img/express.png";
 import firebase from "../../img/firebase.png";
 import framerMotion from "../../img/framerMotion.svg";
 import gameRoom from "../../img/gameroom.png";
@@ -21,9 +22,12 @@ import mercilille from "../../img/merci-lille.png";
 import mongo from "../../img/mongo.webp";
 import mysql from "../../img/mysql.png";
 import next from "../../img/nextjs-icon.svg";
+import node from "../../img/Node.png";
 import nx from "../../img/nx.png";
 import parimis from "../../img/parimis.png";
 import pokemon from "../../img/pokelille.png";
+import qvgdm from "../../img/QVGDM.png";
+import railway from "../../img/railway.webp";
 import rawg from "../../img/rawg.jpeg";
 import render from "../../img/render.png";
 import sabaccKessel from "../../img/sabacc-kessel.png";
@@ -108,19 +112,41 @@ function Projets() {
       },
     },
     {
+      title: "Qui veut gagner des millions ? (2024)",
+      link: "https://qvgdm-two.vercel.app/",
+      image: qvgdm,
+      description:
+        'Reproduction du célèbre jeu télévisé "Qui veut gagner des millions ?" avec un système de gains progressifs, des jokers et un timer avec les téléphones comme télécomande',
+      technologies: {
+        frontend: [
+          { icon: faReact, name: "React" },
+          { icon: faCss3Alt, name: "CSS" },
+        ],
+        backend: [
+          { icon: railway, name: "Railway" },
+          { icon: node, name: "Node.js" },
+        ],
+        autres: [{ icon: vercelIcone, name: "Vercel" }],
+      },
+    },
+    {
       title: "Portfolio Merci Lille (2024)",
       link: "https://mercilille.com/",
       image: mercilille,
       description:
-        "Le portfolio de mon assocation d'organistion d'événements de musique \"Merci Lille\", avec un backend sur Render pour ajouter et modifier les événements/photos",
+        "Le portfolio de mon assocation d'organistion d'événements de musique \"Merci Lille\", avec un backend pour ajouter et modifier les événements/photos",
       technologies: {
         frontend: [
           { icon: faReact, name: "React" },
           { icon: typescript, name: "TypeScript" },
           { icon: tailwindcssIcon, name: "Tailwind CSS" },
+          { icon: vite, name: "Vite" },
           { icon: next, name: "Next" },
         ],
         backend: [
+          { icon: node, name: "Node.js" },
+          { icon: typescript, name: "TypeScript" },
+          { icon: express, name: "Express" },
           { icon: mongo, name: "MongoDB" },
           { icon: render, name: "Render" },
           { icon: uptimerobot, name: "Uptime Robot" },
@@ -138,7 +164,7 @@ function Projets() {
       link: "https://twitch-planning-sandy.vercel.app/",
       image: twitch,
       description:
-        "Une application permettant aux utilisateurs d'avoir un planning des lives Twitch de leur streamer préféré (Projet en cours de développement)",
+        'Une application permettant aux utilisateurs d\'avoir un planning des lives "Twitch" de leur streamer préféré (Projet en cours de développement)',
       technologies: {
         frontend: [
           { icon: faReact, name: "React" },
@@ -153,7 +179,7 @@ function Projets() {
       link: "https://sabacc-kessel-v2-sandy.vercel.app/",
       image: sabaccKessel,
       description:
-        "Un jeu de carte tiré de l'univers Star Wars (Projet en cours de développement)",
+        'Un jeu de carte tiré de l\'univers "Star Wars" (Projet en cours de développement)',
       technologies: {
         frontend: [
           { icon: faReact, name: "React" },
@@ -166,7 +192,8 @@ function Projets() {
       title: "NX Project (2022)",
       link: "https://nx.fouzi-dev.fr/",
       image: nx,
-      description: "La homepage créée lors de mon alternance chez NX Creative",
+      description:
+        'La homepage créée lors de mon alternance chez "NX Creative"',
       technologies: {
         frontend: [
           { icon: faReact, name: "React" },
