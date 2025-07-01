@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+  align-items: stretch; /* Assurer que toutes les cartes ont la même hauteur */
 }
 
 .project-card {
@@ -14,18 +15,67 @@
   text-align: center;
   box-shadow: 0.5rem 0.5rem rgba(132, 81, 61, 0.35);
   transition: transform 0.2s;
+  min-height: 650px; /* Hauteur minimale augmentée pour l'espace technologies */
+  height: 100%; /* Prendre toute la hauteur disponible */
+}
+
+.project-card h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  min-height: 2.5rem; /* Hauteur minimale pour les titres */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card p {
+  margin-bottom: 1rem;
+}
+
+.project-card > p:first-of-type {
+  margin-bottom: 2rem; /* Espace fixe après la description */
+}
+
+/* Titre Technologies - POSITION FIXE */
+.project-card > p:nth-of-type(2) {
+  margin: 0 0 1rem 0; /* Marge fixe, pas de margin-top auto */
+  flex-shrink: 0;
+  font-weight: bold;
+}
+
+/* Container de la section technologies complète */
+.technologies-wrapper {
+  height: 220px; /* HAUTEUR FIXE pour toutes les cartes */
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.project-card .link-allstyles {
+  margin-top: 1.5rem; /* Marge fixe avant le bouton */
+  margin-bottom: 0;
+  flex-shrink: 0;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
 }
 
+/* Container pour l'image */
+.project-image-container {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
 .project-image {
   max-width: 100%;
-  height: auto;
+  max-height: 100%;
+  object-fit: contain;
   border-radius: 8px;
   border: 2px solid var(--color-dark-blue);
-  margin-bottom: 1rem;
 }
 
 .technologies-icons {
@@ -68,20 +118,41 @@ img[src*="cloudinary"] {
 
   .project-card {
     padding: 1rem;
+    min-height: 500px; /* Hauteur réduite mais uniforme sur mobile */
+  }
+
+  .technologies-container {
+    min-height: 150px; /* Hauteur réduite sur mobile */
+    gap: 1rem;
+  }
+
+  .project-image-container {
+    height: 220px; /* Hauteur ajustée pour mobile */
   }
 }
 
 .technologies-container {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  justify-content: center; /* Centre le contenu disponible */
+  gap: 1.5rem; /* Plus d'espace entre les sections */
   margin: 1rem 0;
+  flex-grow: 1; /* Prend l'espace disponible */
+  min-height: 180px; /* Hauteur minimale pour uniformiser */
+}
+
+.tech-category {
+  flex: 1; /* Prend une part égale de l'espace disponible */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .tech-category h4 {
   margin-bottom: 0.5rem;
   color: #666;
   font-size: 0.9rem;
+  text-align: center;
 }
 
 .technologies-icons {

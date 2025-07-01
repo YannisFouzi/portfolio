@@ -159,11 +159,13 @@ function Projets() {
           {projets.map((projet, index) => (
             <div key={index} className="project-card">
               <h3>{projet.title}</h3>
-              <img
-                src={projet.image}
-                alt={`Screenshot du projet ${projet.title}`}
-                className="project-image"
-              />
+              <div className="project-image-container">
+                <img
+                  src={projet.image}
+                  alt={`Screenshot du projet ${projet.title}`}
+                  className="project-image"
+                />
+              </div>
               <p>{projet.description}</p>
               <p>
                 <strong>Technologies</strong>
