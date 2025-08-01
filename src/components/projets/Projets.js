@@ -31,7 +31,6 @@ import railway from "../../img/railway.webp";
 import rawg from "../../img/rawg.jpeg";
 import render from "../../img/render.png";
 import sabaccKessel from "../../img/sabacc-kessel.png";
-import spotify from "../../img/spotify.png";
 import tafraout from "../../img/tafraout.png";
 import tagManager from "../../img/tag_manager.png";
 import tailwindcssIcon from "../../img/tailwindcss-icon.svg";
@@ -42,6 +41,7 @@ import uptimerobot from "../../img/uptimerobot.svg";
 import vercelIcone from "../../img/vercel_icone.png";
 import vite from "../../img/Vite_icon.png";
 import woocommerce from "../../img/woocommerce.svg";
+import youtube from "../../img/Youtube_logo.png";
 import "./Projets.css";
 
 function Projets() {
@@ -62,11 +62,11 @@ function Projets() {
       },
     },
     {
-      title: "Blind test Harry Potter & Star Wars (2025)",
-      link: "https://harrypotter-blindtest.vercel.app/",
+      title: "Blind test Pop Culture (2025)",
+      link: "https://blind-test-brown.vercel.app/",
       image: harry,
       description:
-        "Un blind test interfactif sur les films Harry Potter et Star Wars via l'api de Spotify",
+        "Un blind test interfactif sur ldes oeuvres de Pop Culture via l'api Youtube",
       technologies: {
         frontend: [
           { icon: faReact, name: "React" },
@@ -74,7 +74,7 @@ function Projets() {
           { icon: tailwindcssIcon, name: "Tailwind CSS" },
           { icon: next, name: "Next" },
         ],
-        API: [{ icon: spotify, name: "Spotify" }],
+        API: [{ icon: youtube, name: "Youtube" }],
         autres: [{ icon: vercelIcone, name: "Vercel" }],
       },
     },
