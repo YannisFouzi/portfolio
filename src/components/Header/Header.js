@@ -70,7 +70,7 @@ function Header() {
         <h1>
           <span className="title">Yannis Fouzi</span>
         </h1>
-        <h2>Chef de projet digital</h2>
+        <h2>Créateur de solutions numériques · Web · Automatisation · Infrastructure</h2>
         <a href={myCV} download className="link-github" onClick={handleCVClick}>
           <span>
             <svg

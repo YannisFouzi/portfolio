@@ -44,6 +44,28 @@ import woocommerce from "../../img/woocommerce.svg";
 import youtube from "../../img/Youtube_logo.png";
 import "./Projets.css";
 
+const buildTechnologyColumns = (technologies) => {
+  const apiTechs = [
+    ...(technologies.API || []),
+    ...(technologies.backend || []),
+  ];
+  let apiLabel = "API";
+
+  if (technologies.API?.length && technologies.backend?.length) {
+    apiLabel = "API / Back-end";
+  } else if (technologies.backend?.length) {
+    apiLabel = "Back-end";
+  }
+
+  const columns = [
+    { key: "frontend", label: "Frontend", items: technologies.frontend || [] },
+    { key: "api", label: apiLabel, items: apiTechs },
+    { key: "autres", label: "Autres", items: technologies.autres || [] },
+  ];
+
+  return columns.filter((column) => column.items.length > 0);
+};
+
 function Projets() {
   const projets = [
     {
@@ -277,32 +299,30 @@ function Projets() {
                 <strong>Technologies</strong>
               </p>
               <div className="technologies-container">
-                {Object.entries(projet.technologies).map(
-                  ([category, techs]) =>
-                    techs.length > 0 && (
-                      <div key={category} className="tech-category">
-                        <h4>
-                          {category.charAt(0).toUpperCase() + category.slice(1)}
-                        </h4>
-                        <div className="technologies-icons">
-                          {techs.map((tech, i) => (
-                            <div key={i} className="tech-item">
-                              {typeof tech.icon === "string" ? (
-                                <img
-                                  src={tech.icon}
-                                  alt={tech.name}
-                                  className="tech-icon"
-                                />
-                              ) : (
-                                <FontAwesomeIcon icon={tech.icon} size="2x" />
-                              )}
-                              <span className="tech-name">{tech.name}</span>
-                            </div>
-                          ))}
+                {buildTechnologyColumns(projet.technologies).map((column) => (
+                  <div key={column.key} className="tech-category">
+                    <h4>{column.label}</h4>
+                    <div className="technologies-icons">
+                      {column.items.map((tech, i) => (
+                        <div key={i} className="tech-item">
+                          {typeof tech.icon === "string" ? (
+                            <img
+                              src={tech.icon}
+                              alt={tech.name}
+                              className="tech-icon"
+                            />
+                          ) : (
+                            <FontAwesomeIcon
+                              icon={tech.icon}
+                              className="tech-fa-icon"
+                            />
+                          )}
+                          <span className="tech-name">{tech.name}</span>
                         </div>
-                      </div>
-                    )
-                )}
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
               <a
                 href={projet.link}
