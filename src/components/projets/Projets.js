@@ -16,7 +16,7 @@ import firebase from "../../img/firebase.png";
 import framerMotion from "../../img/framerMotion.svg";
 import gameRoom from "../../img/gameroom.png";
 import googleAnalytics from "../../img/google_analytics.webp";
-import harry from "../../img/harry.png";
+import blindtest from "../../img/blindtest.png";
 import kekave from "../../img/kekave.png";
 import mercilille from "../../img/merci-lille.png";
 import mongo from "../../img/mongo.webp";
@@ -30,7 +30,7 @@ import qvgdm from "../../img/QVGDM.png";
 import railway from "../../img/railway.webp";
 import rawg from "../../img/rawg.jpeg";
 import render from "../../img/render.png";
-import sabaccKessel from "../../img/sabacc-kessel.png";
+import sabaccKessel from "../../img/sabacc-kessel2.png";
 import tafraout from "../../img/tafraout.png";
 import tagManager from "../../img/tag_manager.png";
 import tailwindcssIcon from "../../img/tailwindcss-icon.svg";
@@ -86,7 +86,7 @@ function Projets() {
     {
       title: "Blind test Pop Culture (2025)",
       link: "https://blind-test-brown.vercel.app/",
-      image: harry,
+      image: blindtest,
       description:
         "Un blind test interfactif sur ldes oeuvres de Pop Culture via l'api Youtube",
       technologies: {
