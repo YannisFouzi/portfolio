@@ -85,12 +85,12 @@ function Header() {
           Téléchargez mon CV
         </a>
         <div className="email-container" style={{ marginTop: "20px" }}>
-          <a className="link-github" onClick={handleCopy} href="#">
+          <button className="link-github" type="button" onClick={handleCopy}>
             <span>
               <FontAwesomeIcon icon={faEnvelope} />
             </span>
             {copied ? "Email copié !" : "Copiez mon email"}
-          </a>
+          </button>
         </div>
       </div>
     </header>
