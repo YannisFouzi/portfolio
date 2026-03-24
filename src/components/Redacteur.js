@@ -37,13 +37,12 @@ function Redacteur() {
         </ul>
         <a
           href="https://handsupelectro.fr"
-          className="link-allstyles"
+          className="link-allstyles redacteur-btn"
           target="_blank"
           rel="noopener noreferrer nofollow"
         >
           <FontAwesomeIcon
             icon={faNewspaper}
-            size="2x"
             style={{ marginRight: "8px" }}
           />
           Le site de mon média
@@ -73,15 +72,14 @@ function Redacteur() {
         </ul>
         <a
           href="https://www.notion.so/handsupelectrofr/23504f7036e547d6bc13904bebc783c8?v=a3103c266ad246b3a8c9d307c551be92"
-          className="link-allstyles"
+          className="link-allstyles redacteur-btn"
           target="_blank"
           rel="noopener noreferrer nofollow"
         >
           <FontAwesomeIcon
             icon={faCalendarDays}
-            size="2x"
             style={{ marginRight: "8px" }}
-          />{" "}
+          />
           Le site de l'agenda Notion
         </a>
       </div>

@@ -10,13 +10,12 @@ function Footer() {
           <li>
             <a
               href="https://www.linkedin.com/in/yannis-fouzi-b48140aa/"
-              className="link-allstyles"
+              className="link-allstyles footer-btn"
               target="_blank"
               rel="noopener noreferrer nofollow"
             >
               <FontAwesomeIcon
                 icon={faLinkedin}
-                size="2x"
                 style={{ marginRight: "8px" }}
               />
               Linkedin
@@ -25,15 +24,14 @@ function Footer() {
           <li>
             <a
               href="https://github.com/YannisFouzi"
-              className="link-allstyles"
+              className="link-allstyles footer-btn"
               target="_blank"
               rel="noopener noreferrer nofollow"
             >
               <FontAwesomeIcon
                 icon={faGithub}
-                size="2x"
                 style={{ marginRight: "8px" }}
-              />{" "}
+              />
               Github
             </a>
           </li>

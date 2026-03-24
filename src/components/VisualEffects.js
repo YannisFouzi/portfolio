@@ -36,16 +36,15 @@ function VisualEffects() {
         </ul>
         <a
           href="https://mercilille.com/"
-          className="link-allstyles"
+          className="link-allstyles visual-btn"
           target="_blank"
           rel="noopener noreferrer nofollow"
         >
           <FontAwesomeIcon
             icon={faPeopleGroup}
-            size="2x"
             style={{ marginRight: "8px" }}
-          />{" "}
-          Mon assocation
+          />
+          Mon association
         </a>
       </div>
     </aside>

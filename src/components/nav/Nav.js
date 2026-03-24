@@ -93,6 +93,14 @@ function Nav() {
             </a>
           </li>
           <li>
+            <a
+              href="#animation"
+              onClick={(e) => scrollToSection(e, "#animation")}
+            >
+              Animation & Événementiel
+            </a>
+          </li>
+          <li>
             <a href="#projets" onClick={(e) => scrollToSection(e, "#projets")}>
               Projets web
             </a>

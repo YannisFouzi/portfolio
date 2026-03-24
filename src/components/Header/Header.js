@@ -71,20 +71,20 @@ function Header() {
           <span className="title">Yannis Fouzi</span>
         </h1>
         <h2>Créateur de solutions numériques · Web · Automatisation · Infrastructure</h2>
-        <a href={myCV} download className="link-github" onClick={handleCVClick}>
-          <span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 32 32"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <path d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798z"></path>
-            </svg>
-          </span>
-          Téléchargez mon CV
-        </a>
-        <div className="email-container" style={{ marginTop: "20px" }}>
+        <div className="header-buttons">
+          <a href={myCV} download className="link-github" onClick={handleCVClick}>
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 32 32"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798z"></path>
+              </svg>
+            </span>
+            Téléchargez mon CV
+          </a>
           <button className="link-github" type="button" onClick={handleCopy}>
             <span>
               <FontAwesomeIcon icon={faEnvelope} />

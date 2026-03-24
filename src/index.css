@@ -239,7 +239,7 @@ article,
 aside,
 .page-footer {
   width: 100%;
-  max-width: 78rem;
+  max-width: 90rem;
   margin: 0 auto;
   padding: 0.5rem;
 }
@@ -602,5 +602,19 @@ nav ul a:focus,
   fill: currentColor;
   stroke: var(--color-black);
   stroke-width: 3px;
+}
+
+.redacteur-btn,
+.footer-btn,
+.visual-btn {
+  font-size: 1rem !important;
+}
+
+.redacteur-btn svg,
+.footer-btn svg,
+.visual-btn svg {
+  font-size: 1rem !important;
+  width: 1rem !important;
+  height: 1rem !important;
 }
 

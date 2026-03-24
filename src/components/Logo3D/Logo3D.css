@@ -1,0 +1,17 @@
+.logo3d-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.logo3d-container canvas {
+  cursor: grab;
+}
+
+.logo3d-container canvas:active {
+  cursor: grabbing;
+}

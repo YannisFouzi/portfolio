@@ -1,0 +1,239 @@
+#animation {
+  background-color: var(--color-cream);
+}
+
+#animation .section-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.experiences-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.experience-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 0.25rem solid var(--color-black);
+  background-color: var(--color-white);
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0.5rem 0.5rem rgba(132, 81, 61, 0.35);
+  transition: transform 0.2s;
+  height: 100%;
+}
+
+.experience-card.highlight {
+  border-color: var(--color-dark-blue);
+  box-shadow: 0.5rem 0.5rem rgba(0, 77, 64, 0.35);
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+}
+
+.experience-card h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: var(--color-dark-blue);
+}
+
+.experience-card p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.experience-image-container {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.experience-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 2px solid var(--color-dark-blue);
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  background-color: var(--color-dark-blue);
+  color: var(--color-white);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.experience-card.highlight .tag {
+  background-color: var(--color-terracota);
+}
+
+.projets-links {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.projets-links strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.projets-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.projet-link {
+  background-color: var(--color-terracota);
+  color: var(--color-white);
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.projet-link:hover {
+  background-color: var(--color-dark-blue);
+  transform: scale(1.05);
+}
+
+.experience-card .link-allstyles {
+  margin-top: auto;
+}
+
+@media (max-width: 1024px) {
+  .experiences-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .experiences-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-card {
+    padding: 1rem;
+  }
+
+  #animation .section-intro {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+.logo3d-section {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.logo3d-section h3 {
+  color: var(--color-dark-blue);
+  margin-bottom: 0.5rem;
+}
+
+.logo3d-section p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.videos-section {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.videos-section h3 {
+  color: var(--color-dark-blue);
+  margin-bottom: 1.5rem;
+}
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: stretch;
+  justify-items: center;
+}
+
+.videos-column-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.videos-column-right {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+}
+
+.video-placeholder {
+  background-color: #1a1a2e;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.video-placeholder video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-placeholder.landscape {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  max-width: 500px;
+}
+
+.video-placeholder.portrait {
+  aspect-ratio: 9 / 16;
+  height: 580px;
+}
+
+@media (max-width: 768px) {
+  .videos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .videos-column-right {
+    height: auto;
+  }
+
+  .video-placeholder.portrait {
+    max-height: 500px;
+  }
+}

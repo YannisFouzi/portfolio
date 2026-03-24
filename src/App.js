@@ -10,6 +10,7 @@ import Redacteur from './components/Redacteur';
 import Theatre from './components/Theatre';
 import Footer from './components/Footer';
 import Skills from './components/skills/Skills';
+import Animation from './components/Animation/Animation';
 import { useLocation } from 'react-router-dom';
 import ReactGA from 'react-ga4'; // Import GA4
 
@@ -27,6 +28,7 @@ function App() {
       <Header />
       <Nav />
       <Skills />
+      <Animation />
       <Projets />
       <Musique />
       <Tournage />
