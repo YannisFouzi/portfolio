@@ -33,7 +33,7 @@ function Tournage() {
           </div>
         </div>
         <a
-          href="https://www.youtube.com/@rapture-music/videos"
+          href="https://www.youtube.com/@rapture_fouzi/videos"
           className="link-allstyles tournage-btn"
           target="_blank"
           rel="noopener noreferrer nofollow"
