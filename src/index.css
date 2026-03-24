@@ -233,6 +233,11 @@ aside .container {
   justify-items: center;
 }
 
+aside .container h2 {
+  text-align: center;
+  width: 100%;
+}
+
 header,
 nav,
 article,
