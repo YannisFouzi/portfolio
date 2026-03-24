@@ -293,7 +293,7 @@ function Projets() {
       },
     },
     {
-      title: "Tafraout (2018)",
+      title: "Tafraout (2020)",
       link: "https://tafraout.fouzi-dev.fr/",
       image: tafraout,
       description:
