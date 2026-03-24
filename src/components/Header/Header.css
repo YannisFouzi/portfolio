@@ -4,6 +4,36 @@
   margin-top: 20px;
 }
 
+.header-roles {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.header-roles .role {
+  text-align: center;
+}
+
+.header-roles .role h2 {
+  margin-bottom: 0.25rem;
+  font-size: 1.5rem;
+}
+
+.header-roles .role p {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  .header-roles {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
 .header-buttons {
   display: flex;
   justify-content: center;

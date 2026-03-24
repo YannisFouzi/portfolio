@@ -70,7 +70,16 @@ function Header() {
         <h1>
           <span className="title">Yannis Fouzi</span>
         </h1>
-        <h2>Créateur de solutions numériques · Web · Automatisation · Infrastructure</h2>
+        <div className="header-roles">
+          <div className="role">
+            <h2>Créateur de solutions numériques</h2>
+            <p>Web · Automatisation · Infrastructure</p>
+          </div>
+          <div className="role">
+            <h2>Organisateur d'événements</h2>
+            <p>Audiovisuel · Communication · Animation</p>
+          </div>
+        </div>
         <div className="header-buttons">
           <a href={myCV} download className="link-github" onClick={handleCVClick}>
             <span>
