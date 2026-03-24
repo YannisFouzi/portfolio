@@ -38,7 +38,7 @@ function Footer() {
         </ul>
         <p>
           <strong>
-            Contactez-moi : <h2>yfouzi.dev@gmail.com</h2>
+            Contactez-moi : <h2>contact@fouzi-dev.fr</h2>
           </strong>
         </p>
       </div>

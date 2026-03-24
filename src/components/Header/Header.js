@@ -50,7 +50,7 @@ function Header() {
   };
 
   const handleCopy = () => {
-    navigator.clipboard.writeText("yfouzi.dev@gmail.com").then(() => {
+    navigator.clipboard.writeText("contact@fouzi-dev.fr").then(() => {
       ReactGA.event({
         category: "Email",
         action: "Copy",
