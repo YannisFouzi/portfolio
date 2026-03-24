@@ -92,7 +92,7 @@ function Serveur() {
         </div>
 
         <a
-          href="https://github.com/YannisFouworkedzi/plex-automation"
+          href="https://github.com/YannisFouzi/plex_debrid"
           className="link-allstyles serveur-btn"
           target="_blank"
           rel="noopener noreferrer nofollow"
