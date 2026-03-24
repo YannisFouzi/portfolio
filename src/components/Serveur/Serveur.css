@@ -1,0 +1,150 @@
+.serveur-content {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 2rem;
+}
+
+.serveur-slideshow {
+  position: relative;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.slideshow-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.5s ease;
+}
+
+.slideshow-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dot:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.dot.active {
+  background-color: var(--color-blue);
+  transform: scale(1.2);
+}
+
+.serveur-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.serveur-intro {
+  font-size: 1.3rem;
+  text-align: center;
+  color: var(--color-dark-blue);
+  margin-bottom: 0.5rem;
+}
+
+.serveur-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.spec-category {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 1rem;
+  border-radius: 10px;
+  border: 2px solid var(--color-black);
+}
+
+.spec-category h4 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1rem;
+  color: var(--color-dark-blue);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.spec-category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.spec-category li {
+  font-size: 0.9rem;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.spec-category li:last-child {
+  border-bottom: none;
+}
+
+.serveur-results {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.result-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  background-color: rgba(52, 152, 219, 0.1);
+  border-radius: 8px;
+}
+
+.result-item svg {
+  color: var(--color-blue);
+  font-size: 1.2rem;
+  min-width: 25px;
+}
+
+.serveur-btn {
+  font-size: 1rem !important;
+}
+
+.serveur-btn svg {
+  font-size: 1rem !important;
+  width: 1rem !important;
+  height: 1rem !important;
+}
+
+@media (max-width: 900px) {
+  .serveur-content {
+    grid-template-columns: 1fr;
+  }
+
+  .serveur-slideshow {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .serveur-specs {
+    grid-template-columns: 1fr;
+  }
+}

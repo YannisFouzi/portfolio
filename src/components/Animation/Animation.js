@@ -3,23 +3,24 @@ import "./Animation.css";
 import mercilille from "../../img/merci-lille.png";
 import gameRoom from "../../img/gameroom.png";
 import Logo3D from "../Logo3D/Logo3D";
+import { faPeopleGroup } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import EffetsVideo from "../../video/Animation_Logo_Merci_Lille.mp4";
 
 function Animation() {
   const experiences = [
     {
       title: "Organisateur d'événements - Merci Lille",
       description:
-        "Co-fondateur de l'association Merci Lille, j'organise des événements musicaux (soirées, concerts). Je gère la communication, les visuels, et l'aspect technique : VJing avec Resolume, création de mappings vidéo et de logos 3D avec Blender.",
+        "Co-fondateur de l'association Merci Lille, j'organise des événements musicaux (soirées, concerts). Je gère le site web, la communication, les visuels, le DJing et le VJing avec Resolume.",
       image: mercilille,
       link: "https://mercilille.com/",
-      tags: ["Resolume", "Blender", "Communication", "Organisation"],
     },
     {
       title: "Animateur de jeux & quizz",
       description:
         "J'anime des sessions de jeux interactifs de plusieurs heures. Je crée mes propres jeux web (Qui veut gagner des millions, Blind Test, Game Room) avec des téléphones comme télécommandes. Je développe les scripts, les sites web et confectionne le contenu de A à Z.",
       image: gameRoom,
-      tags: ["Animation", "Développement Web", "Création de contenu"],
       projets: [
         { name: "Game Room", link: "https://gameroom.fouzi-dev.fr/" },
         { name: "QVGDM", link: "https://qvgdm-two.vercel.app/" },
@@ -30,7 +31,7 @@ function Animation() {
       title: "Barman (2-3 jours)",
       description:
         "Quelques jours en service bar dans un environnement festif. J'ai adoré le contact client et l'ambiance conviviale.",
-      tags: ["Service client", "Travail d'équipe"],
+      fullWidth: true,
     },
   ];
 
@@ -47,7 +48,7 @@ function Animation() {
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className={`experience-card ${exp.highlight ? "highlight" : ""}`}
+              className={`experience-card ${exp.fullWidth ? "full-width" : ""}`}
             >
               <h3>{exp.title}</h3>
               {exp.image && (
@@ -61,14 +62,6 @@ function Animation() {
               )}
               <p>{exp.description}</p>
 
-              <div className="tags-container">
-                {exp.tags.map((tag, i) => (
-                  <span key={i} className="tag">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-
               {exp.projets && (
                 <div className="projets-links">
                   <strong>Projets associés :</strong>
@@ -79,7 +72,7 @@ function Animation() {
                         href={projet.link}
                         target="_blank"
                         rel="noopener noreferrer nofollow"
-                        className="projet-link"
+                        className="link-allstyles animation-btn"
                       >
                         {projet.name}
                       </a>
@@ -103,13 +96,15 @@ function Animation() {
         </div>
 
         <div className="logo3d-section">
-          <h3>Création 3D - Logo Merci Lille</h3>
-          <p>Logo créé sur Blender, manipulable à la souris</p>
+          <h4>Logo 3D Merci Lille</h4>
+          <p className="subsection-text">
+            Logo créé sur <strong>Blender</strong> — <em>Cliquez et faites glisser pour manipuler</em>
+          </p>
           <Logo3D modelPath="/Merci_Lille_Animation_3D_WHITE.glb" height="350px" />
         </div>
 
         <div className="videos-section">
-          <h3>Mes réalisations vidéo</h3>
+          <h4>Réalisations VJing</h4>
           <div className="videos-grid">
             <div className="videos-column-left">
               <div className="video-placeholder landscape">
@@ -141,6 +136,30 @@ function Animation() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="effets-section">
+          <h4>Effets Visuels</h4>
+          <p className="subsection-text">
+            Je <strong>confectionne</strong> des effets visuels sur <strong>After Effects</strong> pour mon association de musique.
+          </p>
+          <video
+            src={EffetsVideo}
+            className="effets-video"
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
+          <a
+            href="https://mercilille.com/"
+            className="link-allstyles animation-btn"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            <FontAwesomeIcon icon={faPeopleGroup} style={{ marginRight: "8px" }} />
+            Mon association
+          </a>
         </div>
       </div>
     </aside>

@@ -606,13 +606,15 @@ nav ul a:focus,
 
 .redacteur-btn,
 .footer-btn,
-.visual-btn {
+.visual-btn,
+.animation-btn {
   font-size: 1rem !important;
 }
 
 .redacteur-btn svg,
 .footer-btn svg,
-.visual-btn svg {
+.visual-btn svg,
+.animation-btn svg {
   font-size: 1rem !important;
   width: 1rem !important;
   height: 1rem !important;

@@ -106,6 +106,14 @@ function Nav() {
             </a>
           </li>
           <li>
+            <a
+              href="#serveur"
+              onClick={(e) => scrollToSection(e, "#serveur")}
+            >
+              Serveur Maison
+            </a>
+          </li>
+          <li>
             <a href="#musique" onClick={(e) => scrollToSection(e, "#musique")}>
               Musique
             </a>
@@ -116,14 +124,6 @@ function Nav() {
               onClick={(e) => scrollToSection(e, "#tournage")}
             >
               Tournage vidéo
-            </a>
-          </li>
-          <li>
-            <a
-              href="#visual-effects"
-              onClick={(e) => scrollToSection(e, "#visual-effects")}
-            >
-              Effets Visuels
             </a>
           </li>
           <li>

@@ -14,9 +14,21 @@
 
 .experiences-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   align-items: stretch;
+}
+
+.experience-card.full-width {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.experience-card.full-width p {
+  margin-bottom: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .experience-card {
@@ -110,12 +122,14 @@
 }
 
 .projet-link {
-  background-color: var(--color-terracota);
+  background-color: var(--color-blue);
   color: var(--color-white);
-  padding: 0.4rem 1rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 5px;
   text-decoration: none;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: inline-block;
   transition: background-color 0.2s, transform 0.2s;
 }
 
@@ -128,11 +142,6 @@
   margin-top: auto;
 }
 
-@media (max-width: 1024px) {
-  .experiences-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
 @media (max-width: 768px) {
   .experiences-grid {
@@ -154,15 +163,19 @@
   text-align: center;
 }
 
-.logo3d-section h3 {
-  color: var(--color-dark-blue);
+.logo3d-section h4,
+.videos-section h4 {
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
-.logo3d-section p {
-  color: #666;
+.subsection-text {
   margin-bottom: 1.5rem;
-  font-size: 0.95rem;
+  font-size: 1rem;
+}
+
+.subsection-text em {
+  color: var(--color-dark-blue);
 }
 
 .videos-section {
@@ -170,8 +183,7 @@
   text-align: center;
 }
 
-.videos-section h3 {
-  color: var(--color-dark-blue);
+.videos-section h4 {
   margin-bottom: 1.5rem;
 }
 
@@ -236,4 +248,23 @@
   .video-placeholder.portrait {
     max-height: 500px;
   }
+}
+
+.effets-section {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.effets-section h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.effets-video {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  border-radius: 8px;
 }
