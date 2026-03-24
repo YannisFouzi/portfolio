@@ -6,6 +6,7 @@ import Logo3D from "../Logo3D/Logo3D";
 import { faPeopleGroup } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import EffetsVideo from "../../video/Animation_Logo_Merci_Lille.mp4";
+import TimelapseVideo from "../../video/TIMELAPSE.mp4";
 
 function Animation() {
   const experiences = [
@@ -141,18 +142,26 @@ function Animation() {
         <div className="effets-section">
           <h4>Effets Visuels</h4>
           <p className="subsection-text">
-          Je <strong>confectionne</strong> des effets visuels sur{" "}
-              <strong>After Effects</strong> pour mon assocation de musique ou
-              pour moi même.
+            Je <strong>confectionne</strong> des effets visuels sur <strong>After Effects</strong> et <strong>Premiere Pro</strong> pour mon association et pour moi-même.
           </p>
-          <video
-            src={EffetsVideo}
-            className="effets-video"
-            autoPlay
-            loop
-            muted
-            playsInline
-          />
+          <div className="effets-videos-row">
+            <video
+              src={EffetsVideo}
+              className="effets-video"
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+            <video
+              src={TimelapseVideo}
+              className="effets-video"
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+          </div>
           <a
             href="https://mercilille.com/"
             className="link-allstyles animation-btn"

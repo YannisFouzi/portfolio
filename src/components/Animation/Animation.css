@@ -259,11 +259,24 @@
   margin-bottom: 0.5rem;
 }
 
+.effets-videos-row {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
 .effets-video {
   max-width: 400px;
   width: 100%;
   height: auto;
-  display: block;
-  margin: 0 auto 1.5rem auto;
   border-radius: 8px;
+}
+
+@media (max-width: 850px) {
+  .effets-videos-row {
+    flex-direction: column;
+    align-items: center;
+  }
 }
