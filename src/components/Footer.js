@@ -1,8 +1,12 @@
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin, faReact } from "@fortawesome/free-brands-svg-icons";
+import { faCode, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import "./Footer.css";
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
+  
   return (
     <footer className="page-footer">
       <div className="container">
@@ -38,9 +42,16 @@ function Footer() {
         </ul>
         <p>
           <strong>
-            Contactez-moi : <h2>contact@fouzi-dev.fr</h2>
+            Contactez-moi : <span className="email-highlight">contact@fouzi-dev.fr</span>
           </strong>
         </p>
+        
+        <div className="footer-bottom">
+          <p>
+            Conçu et développé avec <FontAwesomeIcon icon={faHeart} className="heart-icon" /> par <strong>Yannis Fouzi</strong> en <FontAwesomeIcon icon={faReact} className="react-icon" /> React
+          </p>
+          <p className="copyright">© {currentYear} Yannis Fouzi. Tous droits réservés.</p>
+        </div>
       </div>
     </footer>
   );

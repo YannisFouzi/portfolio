@@ -141,7 +141,9 @@ function Animation() {
         <div className="effets-section">
           <h4>Effets Visuels</h4>
           <p className="subsection-text">
-            Je <strong>confectionne</strong> des effets visuels sur <strong>After Effects</strong> pour mon association de musique.
+          Je <strong>confectionne</strong> des effets visuels sur{" "}
+              <strong>After Effects</strong> pour mon assocation de musique ou
+              pour moi même.
           </p>
           <video
             src={EffetsVideo}
