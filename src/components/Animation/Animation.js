@@ -28,7 +28,7 @@ function Animation() {
       ],
     },
     {
-      title: "Barman (2-3 jours)",
+      title: "Barman (3 jours)",
       description:
         "Quelques jours en service bar dans un environnement festif. J'ai adoré le contact client et l'ambiance conviviale.",
       fullWidth: true,
