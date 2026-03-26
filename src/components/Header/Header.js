@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Back, gsap } from "gsap";
 import React, { useEffect, useState } from "react";
 import ReactGA from "react-ga4"; // Import GA4
-import myCV from "../pdf/Yannis_Fouzi_CV_2026-2.pdf";
+import cvEvent from "../pdf/Yannis_Fouzi_CV_2026-2.pdf";
+import cvDev from "../pdf/Yannis_Fouzi_CV_2026-Dev.pdf";
 import "./Header.css";
 
 function Header() {
@@ -41,11 +42,19 @@ function Header() {
     );
   }, []);
 
-  const handleCVClick = () => {
+  const handleCVDevClick = () => {
     ReactGA.event({
       category: "CV",
       action: "Download",
-      label: "User clicked to download CV",
+      label: "CV Développeur",
+    });
+  };
+
+  const handleCVEventClick = () => {
+    ReactGA.event({
+      category: "CV",
+      action: "Download",
+      label: "CV Événementiel",
     });
   };
 
@@ -74,27 +83,40 @@ function Header() {
           <div className="role">
             <h2>Créateur de solutions numériques</h2>
             <p>Web · Automatisation · Infrastructure</p>
+            <a href={cvDev} download className="link-github cv-btn" onClick={handleCVDevClick}>
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 32 32"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798z"></path>
+                </svg>
+              </span>
+            Téléchargez CV Développeur
+          </a>
           </div>
           <div className="role">
             <h2>Organisateur d'événements</h2>
             <p>Audiovisuel · Communication · Animation</p>
+            <a href={cvEvent} download className="link-github cv-btn" onClick={handleCVEventClick}>
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 32 32"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798z"></path>
+                </svg>
+              </span>
+              Téléchargez CV Événementiel
+            </a>
           </div>
         </div>
-        <div className="header-buttons">
-          <a href={myCV} download className="link-github" onClick={handleCVClick}>
-            <span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 32 32"
-                aria-hidden="true"
-                focusable="false"
-              >
-                <path d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798z"></path>
-              </svg>
-            </span>
-            Téléchargez mon CV
-          </a>
-          <button className="link-github" type="button" onClick={handleCopy}>
+        <div className="header-email">
+          <button className="link-github email-btn" type="button" onClick={handleCopy}>
             <span>
               <FontAwesomeIcon icon={faEnvelope} />
             </span>
