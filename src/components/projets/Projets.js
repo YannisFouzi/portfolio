@@ -49,6 +49,9 @@ import uptimerobot from "../../img/uptimerobot.svg";
 import vite from "../../img/Vite_icon.png";
 import woocommerce from "../../img/woocommerce.svg";
 import youtube from "../../img/Youtube_logo.png";
+import shotnotif from "../../img/shotnotif.png";
+import shotgunLogo from "../../img/shotgun.webp";
+import telegramLogo from "../../img/Telegram_logo.svg.webp";
 import "./Projets.css";
 
 const buildTechnologyColumns = (technologies) => {
@@ -96,6 +99,30 @@ function Projets() {
         ],
         API: [
           { icon: steamLogo, name: "Steam API" },
+        ],
+      },
+    },
+    {
+      title: "ShotNotif (2026)",
+      link: "https://shotnotif.vercel.app/",
+      image: shotnotif,
+      description:
+        "Service web qui connecte Shotgun.live à Telegram : l'organisateur colle son jeton API Shotgun, configure un bot et un salon, personnalise le message de notification ; un worker Cloudflare interroge les ventes et envoie une alerte à chaque billet vendu.",
+      technologies: {
+        frontend: [
+          { icon: next, name: "Next.js" },
+          { icon: faReact, name: "React" },
+          { icon: typescript, name: "TypeScript" },
+          { icon: tailwindcssIcon, name: "Tailwind CSS" },
+          { icon: i18next, name: "i18next" },
+        ],
+        backend: [
+          { icon: cloudflare, name: "Cloudflare Workers" },
+          { icon: cloudflare, name: "D1 (SQLite)" },
+        ],
+        API: [
+          { icon: shotgunLogo, name: "Shotgun API" },
+          { icon: telegramLogo, name: "Telegram Bot API" },
         ],
       },
     },
