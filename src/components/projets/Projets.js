@@ -104,7 +104,7 @@ function Projets() {
     },
     {
       title: "ShotNotif (2026)",
-      link: "https://shotnotif.vercel.app/",
+      link: "https://shotnotif.com",
       image: shotnotif,
       description:
         "Service web qui connecte Shotgun.live à Telegram : l'organisateur colle son jeton API Shotgun, configure un bot et un salon, personnalise le message de notification ; un worker Cloudflare interroge les ventes et envoie une alerte à chaque billet vendu.",
