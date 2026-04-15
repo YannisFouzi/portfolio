@@ -4,7 +4,7 @@ import { Back, gsap } from "gsap";
 import React, { useEffect, useState } from "react";
 import ReactGA from "react-ga4"; // Import GA4
 import cvEvent from "../pdf/Yannis_Fouzi_CV_2026-2.pdf";
-import cvDev from "../pdf/Yannis_Fouzi_CV_2026-Dev.pdf";
+import cvDev from "../pdf/YannisFouzi-CV2026-Avril.pdf";
 import "./Header.css";
 
 function Header() {
